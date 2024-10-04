@@ -1,0 +1,989 @@
+<!doctype html>
+<html lang="en" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none"
+  data-preloader="disable" data-theme="default" data-theme-colors="default">
+
+<head>
+
+  <meta charset="utf-8" />
+  <title>PCQ | 관리자</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+  <meta content="Themesbrand" name="author" />
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="../../_img/common/favicon.ico">
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PCQ" />
+  <meta property="og:description" content="PCQ" />
+  <meta property="og:image" content="../../_img/common/opengraph.png" />
+  <!-- jQuery CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <!-- jsvectormap css -->
+  <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
+  <!--Swiper slider css-->
+  <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+  <!-- Layout config Js -->
+  <script src="assets/js/layout.js"></script>
+  <link rel="stylesheet" href="../_css/reset.css">
+  <link rel="stylesheet" href="../../_css/attribute.css">
+  <!-- Bootstrap Css -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <!-- Icons Css -->
+  <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+  <!-- App Css-->
+  <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" />
+  <!-- custom Css-->
+  <link href="../assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+  <!-- admin.css -->
+  <link href="../_css/admin.css" rel="stylesheet" type="text/css" />
+  <script src="../_js/common.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Begin page -->
+  <div id="layout-wrapper">
+
+
+    <!-- 왼쪽 메뉴 영역 -->
+    <div class="app-menu navbar-menu">
+      <!-- LOGO -->
+      <div class="navbar-brand-box">
+        <!-- Dark Logo-->
+        <a href="index.html" class="logo logo-dark">
+          <span class="logo-sm">
+            <img src="../_img/common/logo-sm.png" alt="" height="22">
+          </span>
+          <span class="logo-lg">
+            <img src="../_img/common/logo_white.png" alt="" height="34">
+          </span>
+        </a>
+
+        <a href="index.html" class="logo logo-light">
+          <span class="logo-sm">
+            <img src="../_img/common/logo-sm.png" alt="" height="22">
+          </span>
+          <span class="logo-lg">
+            <img src="../_img/common/logo_white.png" alt="" height="34">
+          </span>
+        </a>
+        <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+          id="vertical-hover">
+          <i class="ri-record-circle-line"></i>
+        </button>
+      </div>
+
+      <div id="scrollbar">
+        <div class="container-fluid">
+          <div id="two-column-menu">
+          </div>
+          <div class="favorite_menus">
+            <button type="button" class="btn_favorite">
+              <i class="ri-star-fill"></i> 즐겨찾기
+            </button>
+            <ul class="favorite_list">
+              <li>
+                <button type="button" class="btn_mark active"></button>
+                <a href="#">감독관 정보관리</a>
+              </li>
+              <li>
+                <button type="button" class="btn_mark active"></button>
+                <a href="#">연계(협약)기관관리</a>
+              </li>
+              <li>
+                <button type="button" class="btn_mark active"></button>
+                <a href="#">사용자관리</a>
+              </li>
+              <li>
+                <button type="button" class="btn_mark active"></button>
+                <a href="#">검정마스터등록</a>
+              </li>
+            </ul>
+          </div>
+          <ul class="navbar-nav" id="navbar-nav">
+            <li class="menu-title"><span data-key="t-menu">Menu</span></li>
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu1" data-bs-toggle="collapse" role="button" aria-expanded="true"
+                aria-controls="sidebarMenu1">
+                <span data-key="t-dashboards">기준정보</span>
+              </a>
+              <div class="collapse menu-dropdown show" id="sidebarMenu1">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link active"> 사용자관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 코드관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 수입 기준관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 지출 기준관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 가상계좌번호 관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 자격증 문구관리</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">연계(협약)기관관리</a>
+                  </li>
+                  <li class="nav-item">
+                    <a hhref="#" class="nav-link">사용자변 권한관리</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu2" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu2">
+                <span data-key="t-apps">인력관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu2">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 감독관 정보관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 운영자 정보관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 시설관리자 정보관리 </a>
+                  </li>
+                </ul>
+              </div>
+          
+            </li>
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu3" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu3">
+                <span data-key="t-apps">시설관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu3">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">시험장 정보관리</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu4" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu4">
+                <span data-key="t-apps">검정과정관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu4">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">검정마스터등록</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu5" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu5">
+                <span data-key="t-apps">검정운영관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu5">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#sidebarMenu5_1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                      aria-controls="sidebarMenu5_1">
+                      검정차수(기수)관리
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarMenu5_1">
+                      <ul class="nav nav-sm flex-column">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link"> 기본정보 </a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link"> 차수별 지출내역
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#sidebarMenu5_2" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                      aria-controls="sidebarMenu5_2">
+                      차수(기수)별 평가자 관리
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarMenu5_2">
+                      <ul class="nav nav-sm flex-column">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link"> 검정신청자관리 </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu6" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu6">
+                <span data-key="t-apps">검정결과관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu6">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#sidebarMenu6_1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                      aria-controls="sidebarMenu6_1">
+                      차수(기수)별 결과관리
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarMenu6_1">
+                      <ul class="nav nav-sm flex-column">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link"> 검정결과처리 </a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link"> 합격처리 </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu7" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu7">
+                <span data-key="t-apps">지출관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu7">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">재료비 지출내역</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">인건비 지출내역</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">시설사용료 지출내역</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">기타 제반비용 지출내역</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">지출내역 종합관리</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu8" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu8">
+                <span data-key="t-apps">회원정보관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu8">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">회원정보관리</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu9" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu9">
+                <span data-key="t-apps">보수교육 관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu9">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">보수교육과정 등록</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">보수교육 운영</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">보수교육 운영 결과</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu10" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu10">
+                <span data-key="t-apps">문자 및 이메일 발송</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu10">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">문자 발송</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">이메일 발송</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Sidebar -->
+      </div>
+      <div class="sidebar-background"></div>
+    </div>
+    <div class="vertical-overlay"></div>
+    <!-- 오른쪽 컨텐츠 영역 -->
+    <div class="main-content">
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div id="page-topbar">
+              <div class="layout-width">
+                <div class="navbar-header">
+                  <!-- tab -->
+                  <div class="d-flex header_tabs">
+                    <ul class="header_tabs_ul" role="tablist">
+                      <li class="nav-item active">
+                        <a class="nav-link" data-bs-toggle="tab" href="#" role="tab">
+                          코드관리
+                        </a>
+                        <button type="button">
+                          <i class="ri-close-line"></i>
+                        </button>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#" role="tab">
+                          사용자관리
+                          <button type="button">
+                            <i class="ri-close-line"></i>
+                          </button>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#" role="tab">
+                          수입 기준관리
+                          <button type="button">
+                            <i class="ri-close-line"></i>
+                          </button>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#" role="tab">
+                          연계(협약)기관관리
+                          <button type="button">
+                            <i class="ri-close-line"></i>
+                          </button>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="d-flex align-items-center">
+                    <div class="dropdown ms-sm-3 header-item topbar-user">
+                      <button type="button" class="btn material-shadow-none" id="page-header-user-dropdown"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="d-flex align-items-center">
+                          <img class="rounded-circle header-profile-user" src="../_img/common/logo-sm.png"
+                            style="object-fit: none;" alt="Header Avatar">
+                          <span class="text-start ms-xl-2">
+                            <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">홍길동</span>
+                            <span class="d-none d-xl-block ms-1 fs-12 user-name-sub-text">관리자</span>
+                          </span>
+                        </span>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-end">
+                        <!-- item-->
+                        <h6 class="dropdown-header">Welcome 관리자!</h6>
+                        <a class="dropdown-item" href="pages-profile.html"><i
+                            class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span
+                            class="align-middle">Profile</span></a>
+                        <a class="dropdown-item" href="pages-profile-settings.html"><i
+                            class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i> <span
+                            class="align-middle">Settings</span></a>
+                        <a class="dropdown-item" href="auth-logout-basic.html"><i
+                            class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span class="align-middle"
+                            data-key="t-logout">Logout</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contents active">
+              <div class="card">
+                <div class="card-header align-items-center d-flex gap-2">
+                  <button type="button" class="btn_mark"></button>
+                  <h4 class="card-title mb-0 flex-grow-1">코드관리</h4>
+                </div>
+                <div class="card-body">
+                  <div class="menu_title">
+                    <div class="sub_title mb0">
+                      <h5>자격급수 코드관리</h5>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <button class="btn w-sm btn-md btn_detail"><span>조회</span></button>
+                      <!-- 임의 ID 부여 -->
+                      <button id="btnNew" class="btn w-sm btn-md btn_new">신규</button>
+                      <button id="btnDelete" class="btn w-sm btn-md btn_delete">삭제</button>
+                      <button class="btn w-sm btn-md btn_save">저장</button>
+                    </div>
+                  </div>
+                  <div class="live-preview mt-4">
+                    <div class="table-scrollY">
+                      <div class="table-responsive table-scrolY__wrap table-card m-0">
+                        <!-- 임의 ID 부여 -->
+                        <table id="tbl_A" class="table align-middle table-nowrap table-striped-columns mb-0 table_list">
+                          <colgroup>
+                            <col style="width: 10%;">
+                            <col style="width: 10%;">
+                            <col style="width: 20%;">
+                            <col style="width: 20%">
+                            <col style="width: 20%;">
+                            <col style="width: 20%;">
+                          </colgroup>
+                          <thead class="table-light">
+                            <tr>
+                              <th scope="col">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="cardtableCheck">
+                                  <label class="form-check-label" for="cardtableCheck"></label>
+                                </div>
+                              </th>
+                              <th scope="col">No</th>
+                              <th scope="col">자격명</th>
+                              <th scope="col">급수명</th>
+                              <th scope="col">코드부여</th>
+                              <th scope="col">사용여부</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr data-modify="false">
+                              <td data-modify="false">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" name="tbl_A_checkbox" value="" id="tbl_A_chk_1">
+                                  <label class="form-check-label" for="tbl_A_chk_1"></label>
+                                </div>
+                              </td>
+                              <td data-modify="false">1</td>
+                              <td data-modify="true">A</td>
+                              <td data-modify="true">이다산</td>
+                              <td data-modify="true">자격팀</td>
+                              <td data-modify="true">팀장</td>
+                            </tr>
+                            <tr data-modify="false">
+                              <td data-modify="false">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" name="tbl_A_checkbox" id="tbl_A_chk_2">
+                                  <label class="form-check-label" for="tbl_A_chk_2"></label>
+                                </div>
+                              </td>
+                              <td data-modify="false">2</td>
+                              <td data-modify="true">A</td>
+                              <td data-modify="true">이다산</td>
+                              <td data-modify="true">자격팀</td>
+                              <td data-modify="true">팀장</td>
+                            </tr>
+                            <tr data-modify="false">
+                              <td data-modify="false">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" name="tbl_A_checkbox" id="tbl_A_chk_3">
+                                  <label class="form-check-label" for="tbl_A_chk_3"></label>
+                                </div>
+                              </td>
+                              <td data-modify="false">3</td>
+                              <td data-modify="true">A</td>
+                              <td data-modify="true">이다산</td>
+                              <td data-modify="true">자격팀</td>
+                              <td data-modify="true">팀장</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-3">
+                      <div class="pagination-wrap hstack gap-2">
+                        <a class="page-item pagination-prev disabled" href="#">
+                          Previous
+                        </a>
+                        <ul class="pagination listjs-pagination mb-0">
+                          <li class="active"><a class="page" href="#" data-i="1" data-page="3">1</a></li>
+                          <li><a class="page" href="#" data-i="2" data-page="3">2</a></li>
+                        </ul>
+                        <a class="page-item pagination-next" href="#">
+                          Next
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex gap-5 mt-4">
+                    <div class="flex-grow-1">
+                      <div class="menu_title">
+                        <div class="sub_title mb0">
+                          <h5>지역별 코드관리</h5>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                          <button class="btn w-sm btn-md btn_detail"><span>조회</span></button>
+                          <button class="btn w-sm btn-md btn_new">신규</button>
+                          <button class="btn w-sm btn-md btn_delete">삭제</button>
+                          <button class="btn w-sm btn-md btn_save">저장</button>
+                        </div>
+                      </div>
+                      <div class="live-preview mt-4">
+                        <div class="table-scrollY">
+                          <div class="table-responsive table-scrolY__wrap table-card m-0">
+                            <table class="table align-middle table-nowrap table-striped-columns mb-0 table_list">
+                              <colgroup>
+                                <col style="width: 10%;">
+                                <col style="width: 20%;">
+                                <col style="width: 20%">
+                                <col style="width: 20%;">
+                                <col style="width: 20%;">
+                              </colgroup>
+                              <thead class="table-light">
+                                <tr>
+                                  <th scope="col">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="cardtableCheck">
+                                      <label class="form-check-label" for="cardtableCheck"></label>
+                                    </div>
+                                  </th>
+                                  <th scope="col">No</th>
+                                  <th scope="col">지역명</th>
+                                  <th scope="col">코드부여</th>
+                                  <th scope="col">사용여부</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                      <label class="form-check-label" for="chk1_1"></label>
+                                    </div>
+                                  </td>
+                                  <td>1</td>
+                                  <td>지역1</td>
+                                  <td>자격팀</td>
+                                  <td>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                      <label class="form-check-label" for="chk1_1"></label>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                      <label class="form-check-label" for="chk1_1"></label>
+                                    </div>
+                                  </td>
+                                  <td>1</td>
+                                  <td>지역1</td>
+                                  <td>자격팀</td>
+                                  <td>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                      <label class="form-check-label" for="chk1_1"></label>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                      <label class="form-check-label" for="chk1_1"></label>
+                                    </div>
+                                  </td>
+                                  <td>1</td>
+                                  <td>지역1</td>
+                                  <td>자격팀</td>
+                                  <td>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                      <label class="form-check-label" for="chk1_1"></label>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-3">
+                          <div class="pagination-wrap hstack gap-2">
+                            <a class="page-item pagination-prev disabled" href="#">
+                              Previous
+                            </a>
+                            <ul class="pagination listjs-pagination mb-0">
+                              <li class="active"><a class="page" href="#" data-i="1" data-page="3">1</a></li>
+                              <li><a class="page" href="#" data-i="2" data-page="3">2</a></li>
+                            </ul>
+                            <a class="page-item pagination-next" href="#">
+                              Next
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex-grow-1">
+                      <div class="menu_title">
+                        <div class="sub_title mb0">
+                          <h5>상시여부 코드관리</h5>
+                        </div>
+                        <div class="d-flex align-items-center gap-2">
+                          <button class="btn w-sm btn-md btn_detail"><span>조회</span></button>
+                          <button class="btn w-sm btn-md btn_new">신규</button>
+                          <button class="btn w-sm btn-md btn_delete">삭제</button>
+                          <button class="btn w-sm btn-md btn_save">저장</button>
+                        </div>
+                      </div>
+                      <div class="live-preview mt-4">
+                        <div class="table-scrollY">
+                          <div class="table-responsive table-scrolY__wrap table-card m-0">
+                            <table class="table align-middle table-nowrap table-striped-columns mb-0 table_list">
+                              <colgroup>
+                                <col style="width: 10%;">
+                                <col style="width: 20%;">
+                                <col style="width: 20%">
+                                <col style="width: 20%;">
+                                <col style="width: 20%;">
+                              </colgroup>
+                              <thead class="table-light">
+                                <tr>
+                                  <th scope="col">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="cardtableCheck">
+                                      <label class="form-check-label" for="cardtableCheck"></label>
+                                    </div>
+                                  </th>
+                                  <th scope="col">No</th>
+                                  <th scope="col">상시여부</th>
+                                  <th scope="col">코드부여</th>
+                                  <th scope="col">사용여부</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                      <label class="form-check-label" for="chk1_1"></label>
+                                    </div>
+                                  </td>
+                                  <td>1</td>
+                                  <td></td>
+                                  <td>자격팀</td>
+                                  <td>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                      <label class="form-check-label" for="chk1_1"></label>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                      <label class="form-check-label" for="chk1_1"></label>
+                                    </div>
+                                  </td>
+                                  <td>1</td>
+                                  <td></td>
+                                  <td>자격팀</td>
+                                  <td>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                      <label class="form-check-label" for="chk1_1"></label>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                      <label class="form-check-label" for="chk1_1"></label>
+                                    </div>
+                                  </td>
+                                  <td>1</td>
+                                  <td></td>
+                                  <td>자격팀</td>
+                                  <td>
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                      <label class="form-check-label" for="chk1_1"></label>
+                                    </div>
+                                  </td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-center mt-3">
+                          <div class="pagination-wrap hstack gap-2">
+                            <a class="page-item pagination-prev disabled" href="#">
+                              Previous
+                            </a>
+                            <ul class="pagination listjs-pagination mb-0">
+                              <li class="active"><a class="page" href="#" data-i="1" data-page="3">1</a></li>
+                              <li><a class="page" href="#" data-i="2" data-page="3">2</a></li>
+                            </ul>
+                            <a class="page-item pagination-next" href="#">
+                              Next
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="menu_title mt-4">
+                    <div class="sub_title mb0">
+                      <h5>지역별 코드관리</h5>
+                    </div>
+                    <div class="d-flex align-items-center gap-2">
+                      <button class="btn w-sm btn-md btn_detail"><span>조회</span></button>
+                      <button class="btn w-sm btn-md btn_new">신규</button>
+                      <button class="btn w-sm btn-md btn_delete">삭제</button>
+                      <button class="btn w-sm btn-md btn_save">저장</button>
+                    </div>
+                  </div>
+                  <div class="live-preview mt-4">
+                    <div class="table-scrollY">
+                      <div class="table-responsive table-scrolY__wrap table-card m-0">
+                        <table class="table align-middle table-nowrap table-striped-columns mb-0 table_list">
+                          <colgroup>
+                            <col style="width: 10%;">
+                            <col style="width: 10%;">
+                            <col style="width: 20%;">
+                            <col style="width: 20%">
+                            <col style="width: 20%;">
+                            <col style="width: 20%;">
+                          </colgroup>
+                          <thead class="table-light">
+                            <tr>
+                              <th scope="col">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="cardtableCheck">
+                                  <label class="form-check-label" for="cardtableCheck"></label>
+                                </div>
+                              </th>
+                              <th scope="col">No</th>
+                              <th scope="col">자격명</th>
+                              <th scope="col">급수명</th>
+                              <th scope="col">코드부여</th>
+                              <th scope="col">사용여부</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                  <label class="form-check-label" for="chk1_1"></label>
+                                </div>
+                              </td>
+                              <td>1</td>
+                              <td>A</td>
+                              <td>이다산</td>
+                              <td>자격팀</td>
+                              <td>팀장</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                  <label class="form-check-label" for="chk1_1"></label>
+                                </div>
+                              </td>
+                              <td>1</td>
+                              <td>A</td>
+                              <td>이다산</td>
+                              <td>자격팀</td>
+                              <td>팀장</td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                  <label class="form-check-label" for="chk1_1"></label>
+                                </div>
+                              </td>
+                              <td>1</td>
+                              <td>A</td>
+                              <td>이다산</td>
+                              <td>자격팀</td>
+                              <td>팀장</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-3">
+                      <div class="pagination-wrap hstack gap-2">
+                        <a class="page-item pagination-prev disabled" href="#">
+                          Previous
+                        </a>
+                        <ul class="pagination listjs-pagination mb-0">
+                          <li class="active"><a class="page" href="#" data-i="1" data-page="3">1</a></li>
+                          <li><a class="page" href="#" data-i="2" data-page="3">2</a></li>
+                        </ul>
+                        <a class="page-item pagination-next" href="#">
+                          Next
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--start back-to-top-->
+  <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+  <!--end back-to-top-->
+
+  <!--preloader-->
+  <div id="preloader">
+    <div id="status">
+      <div class="spinner-border text-primary avatar-sm" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/libs/node-waves/waves.min.js"></script>
+  <script src="../assets/libs/feather-icons/feather.min.js"></script>
+  <script src="../assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+  <script src="../assets/js/plugins.js"></script>
+  <!-- App js -->
+  <script src="../assets/js/app.js"></script>
+
+  <script>
+    $(function() {
+      // 신규 버튼 클릭
+      $('#btnNew').click(function() {
+        let rowCnt = $('#tbl_A tbody tr').length;
+
+        let src = `
+          <tr>
+            <td>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" name="tbl_A_checkbox" id="tbl_A_chk_${rowCnt + 1}">
+                <label class="form-check-label" for="tbl_A_chk_${rowCnt + 1}"></label>
+              </div>
+            </td>
+            <td>${rowCnt + 1}</td>
+            <td>
+              <input type='text' class='form-control' />  
+            </td>
+            <td>
+              <input type='text' class='form-control' />
+            </td>
+            <td>
+              <input type='text' class='form-control' />
+            </td>
+            <td>
+              <input type='text' class='form-control' />
+            </td>
+          </tr>
+        `;
+
+        $('#tbl_A tbody').append(src)
+      })
+    })
+
+    // 수정
+    $('#tbl_A tbody tr').click(function() {
+      let clickTr = $(this)[0]
+      let tdSrc = $(this)[0].children;
+      
+      // console.log(tdSrc);
+
+      if(clickTr.dataset.modify == "false") {
+        Array.prototype.forEach.call(tdSrc, (td) => {
+          if (td.dataset.modify == 'true') {
+            // console.log(td);
+
+            let src = `<input type='text' class='form-control' value='${td.innerHTML}'/>`;
+
+            $(td).html('')
+            $(td).html(src)
+          }
+        })
+      }
+      
+
+      clickTr.dataset.modify = true;
+
+      let modifingTr = $('#tbl_A tbody tr[data-modify="true"]')
+      
+      Array.prototype.forEach.call(modifingTr, (tr) => {
+        if (clickTr != tr) {
+          // 클릭하지않은 다른 tr은 텍스트로 변경
+          Array.prototype.forEach.call(tr.children, (td) => {
+            if (td.dataset.modify == 'true') {
+              console.log(td.children[0].value);
+              
+              let src = td.children[0].value
+              
+
+              $(td).html('')
+              $(td).html(src)
+
+              tr.dataset.modify = false;
+            }
+          })
+        }
+      })
+
+      
+    
+      
+      // else if ($(this)[0].dataset.modify == "true") {
+      //   // 수정중이면
+
+      //   let tdSrc = $(this)[0].children;
+      //   $(this)[0].dataset.modify = false;
+      //   console.log(tdSrc);
+
+      //   // Array.prototype.forEach.call(tdSrc, (td) => {
+      //   //   if (td.dataset.modify == 'true') {
+      //   //     console.log(td);
+
+      //   //     let src = `<input type='text' class='form-control' value='${td.innerHTML}'/>`;
+
+      //   //     $(td).html('')
+      //   //     $(td).html(src)
+      //   //   }
+      //   // })   
+      // }
+    })
+
+    // 삭제버튼 클릭
+    $('#btnDelete').click(function() {
+      let checkedTr = $('#tbl_A input[name=tbl_A_checkbox]:checked').parents('tr')
+
+      // ================ row 지우기 ================
+      // 화면에서 안보이게 tr태그 지움
+      checkedTr.remove()
+      // TODD : 데이터 지우는 작업 필요
+
+
+    })
+  </script>
+</body>
+
+</html>

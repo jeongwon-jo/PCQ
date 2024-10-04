@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCQ</title>
+  <!-- Favicon -->
+  <link rel="icon" href="../_img/common/favicon.ico">
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PCQ" />
+  <meta property="og:description" content="PCQ" />
+  <meta property="og:image" content="../_img/common/opengraph.png" />
+  <!-- Font -->
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+  <!-- jQuery CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <!-- DateTimePicker -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- NiceSelect -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- Custom CSS & JS -->
+  <link rel="stylesheet" href="../_css/reset.css">
+  <link rel="stylesheet" href="../_css/variables.css">
+  <link rel="stylesheet" href="../_css/element.css">
+  <link rel="stylesheet" href="../_css/layout.css">
+  <link rel="stylesheet" href="../_css/common.css">
+  <link rel="stylesheet" href="../_css/style.css">
+  <link rel="stylesheet" href="../_css/main.css">
+  <link rel="stylesheet" href="../_css/account.css">
+  <link rel="stylesheet" href="../_css/attribute.css">
+  <script src="../_js/common.js" defer></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <header class="header">
+      <div class="header_top">
+        <div class="header__inner">
+          <a href="../index.html" class="logo">
+            <img src="../_img/common/logo.png" alt="로고" height="40">
+          </a>
+          <div class="header_account">
+            <form class="form_header_login">
+              <fieldset>
+                <div class="header_login">
+                  <div class="login_input">
+                    <label for="">아이디</label>
+                    <input type="text">
+                  </div>
+                  <div class="login_input">
+                    <label for="">비밀번호</label>
+                    <input type="password">
+                  </div>
+                  <button type="submit" class="btn btn-sm btn_p16 btn_login">로그인</button>
+                </div>
+              </fieldset>
+            </form>
+            <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">아이디/비밀번호 찾기</a>
+            <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">회원가입</a>
+          </div>
+          <button type="button" class="btn_mo_menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="header__inner">
+          <nav class="gnb">
+            <ul class="gnb_ul">
+              <li class="gnb_li">
+                <a href="#">시험정보</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">자격소개</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">시험안내</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">응시안내</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">관련규정</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">시험장 현황</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">샘플문제</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">보수교육 안내</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb_li">
+                <a href="#">원서접수</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">원서접수</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">원서접수 확인 및 취소</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">수험표 출력</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb_li">
+                <a href="#">마이페이지</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">원서접수내역</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">시험결과확인</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">1:1 문의</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">환불신청</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">개인정보 관리</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb_li">
+                <a href="#">자격증 신청</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">자격증 발급신청</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">자격증 유효기간 연장</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb_li">
+                <a href="#">고객센터</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">공지사항</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">자주 하는 질문</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">자료실</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- 모바일 헤더 햄버거 버튼 눌렀을 때 나오는 사이드바 -->
+    <div class="mobile_sidebar">
+      <div class="m_sidebar__inner">
+        <!-- 로그인 전 -->
+        <form action="" class="form_m_account">
+          <fieldset>
+            <div class="m_sidebar_login">
+              <div class="login_input">
+                <label for="">아이디</label>
+                <input type="text">
+              </div>
+              <div class="login_input">
+                <label for="">비밀번호</label>
+                <input type="password">
+              </div>
+              <div class="login_btns">
+                <button type="submit" class="btn btn-sm btn_p16 btn_gradient btn_login">로그인</button>
+                <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">아이디/비밀번호 찾기</a>
+                <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">회원가입</a>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        <!-- 로그인 후 -->
+        <!-- <div class="m_sidebar_account">
+              <h3>안녕하세요 00님!</h3>
+              <div class="account_btns">
+                <a href="#" class="btn btn-sm btn_gradient">마이페이지</a>
+                <a href="#" class="btn btn-sm btn_outline_brand">로그아웃</a>
+              </div>
+            </div> -->
+        <nav class="m_sidebar">
+          <ul class="sidebar_ul">
+            <li><a href="#">시험정보</a></li>
+            <li><a href="#">원서접수</a></li>
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="#">자격증 신청</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <main class="main">
+      <div class="container">
+        <!-- 좌측 Navbar -->
+        <nav class="left_navbar">
+          <div class="navbar_title">
+            <h3>원서접수</h3>
+          </div>
+          <ul class="lnb_ul">
+            <li class="lnb_li active">
+              <a href="#">원서접수</a>
+            </li>
+            <li class="lnb_li">
+              <a href="#">원서접수 확인 및 취소</a>
+            </li>
+            <li class="lnb_li">
+              <a href="#">수험표 출력</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- 우측 콘텐츠 -->
+        <div class="contents active">
+          <div class="page_title_area">
+            <ul class="breadcrumb">
+              <li class="home">HOME</li>
+              <li>원서접수</li>
+              <li class="active">원서접수</li>
+            </ul>
+            <h1 class="page_title">원서접수</h1>
+          </div>
+          <div class="receipt_content">
+            <div class="sub_container">
+              <div class="sub_title">
+                <h5>시험선택</h5>
+              </div>
+              <div class="sub_content mt16">
+                <div class="search_wrap">
+                  <form action="" class="form_search">
+                    <fieldset>
+                      <div class="search_field">
+                        <label for="" class="search_label">시험일</label>
+                        <div class="search_input search_date">
+                          <input type="text" class="datepicker">
+                        </div>
+                      </div>
+                    </fieldset>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="receipt_container">
+              <div class="receipt_info">
+                <div class="receipt_box">
+                  <div class="sub_title">
+                    <h5>평가장 선택</h5>
+                  </div>
+                  <div class="receipt_info_cnts">
+                    <div class="area_filter">
+                      <div class="checkbox--filter">
+                        <label for="area1">
+                          <input type="checkbox" name="checkbox_area" id="area1" checked><em>서울</em>
+                        </label>
+                      </div>
+                      <div class="checkbox--filter">
+                        <label for="area2">
+                          <input type="checkbox" name="checkbox_area" id="area2"><em>경기</em>
+                        </label>
+                      </div>
+                      <div class="checkbox--filter">
+                        <label for="area3">
+                          <input type="checkbox" name="checkbox_area" id="area3" checked><em>대전</em>
+                        </label>
+                      </div>
+                      <div class="checkbox--filter">
+                        <label for="area4">
+                          <input type="checkbox" name="checkbox_area" id="area4" checked><em>대구</em>
+                        </label>
+                      </div>
+                      <div class="checkbox--filter">
+                        <label for="area8">
+                          <input type="checkbox" name="checkbox_area" id="area8" checked><em>세종</em>
+                        </label>
+                      </div>
+                      <div class="checkbox--filter">
+                        <label for="area9">
+                          <input type="checkbox" name="checkbox_area" id="area9" checked><em>광주</em>
+                        </label>
+                      </div>
+                      <div class="checkbox--filter">
+                        <label for="area5">
+                          <input type="checkbox" name="checkbox_area" id="area5"><em>부산</em>
+                        </label>
+                      </div>
+                      <div class="checkbox--filter">
+                        <label for="area6">
+                          <input type="checkbox" name="checkbox_area" id="area6"><em>충북</em>
+                        </label>
+                      </div>
+                      <div class="checkbox--filter">
+                        <label for="area7">
+                          <input type="checkbox" name="checkbox_area" id="area7"><em>충남</em>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="exam_loc_list mt16">
+                      <div class="exam_loc_item">
+                        <span class="exam_area">서울</span>
+                        <div class="exam_name_btns">
+                          <h4><span class="ing">접수중</span>다산에듀 한티점</h4>
+                          <button type="button" class="btn btn-md btn_p16 btn_loc"
+                            onclick="openModal('modal-show-location')"><span>위치보기</span></button>
+                        </div>
+                        <div class="exam_loc_info">
+                          <p class="address">서울특별시 강남구 강남대로 123 - 2길 12 강남빌딩 5층</p>
+                        </div>
+                      </div>
+                      <div class="exam_loc_item">
+                        <span class="exam_area">서울</span>
+                        <div class="exam_name_btns">
+                          <h4><span class="ing">접수중</span>다산에듀 한티점</h4>
+                          <button type="button" class="btn btn-md btn_p16 btn_loc"
+                            onclick="openModal('modal-show-location')"><span>위치보기</span></button>
+                        </div>
+                        <div class="exam_loc_info">
+                          <p class="address">서울특별시 강남구 강남대로 123 - 2길 12 강남빌딩 5층</p>
+                        </div>
+                      </div>
+                      <div class="exam_loc_item">
+                        <span class="exam_area">서울</span>
+                        <div class="exam_name_btns">
+                          <h4><span class="ing">접수중</span>다산에듀 한티점</h4>
+                          <button type="button" class="btn btn-md btn_p16 btn_loc"
+                            onclick="openModal('modal-show-location')"><span>위치보기</span></button>
+                        </div>
+                        <div class="exam_loc_info">
+                          <p class="address">서울특별시 강남구 강남대로 123 - 2길 12 강남빌딩 5층</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="receipt_box">
+                  <div class="sub_title">
+                    <h5>규정동의</h5>
+                  </div>
+                  <div class="receipt_info_cnts">
+                    <div class="agree_content mt0">
+                      <section class="agree_section">
+                        <div class="agree_checkbox chkAll">
+                          <div class="checkbox--typeA">
+                            <label for="chkAll">
+                              <input type="checkbox" id="chkAll"><em></em> 전체규정에 동의합니다.
+                            </label>
+                          </div>
+                        </div>
+                      </section>
+                      <section class="agree_section">
+                        <div class="agree_title">
+                          <p>개인정보 수집동의 <span class="asterisk">*</span></p>
+                          <button type="button" class="btn_open"></button>
+                        </div>
+                        <div class="agree_cnts">
+                          <div class="text scroll_fixed_y">
+                            제1조(목적) 이 약관은 ㈜다산에듀(이하 “회사”)가 웹사이트(www.e-dasan.net, 모바일을 포함하며 이와 같습니다.)를 통하여 제공하는 교육서비스(이하“서비스”라 하며, 접속 가능한 유·무선 단말기의
+                            종류와는 상관없이 이용 가능한 회사가 제공하는 모든 서비스를 의미합니다)의 이용과 관련하여 회사와 회원 사이에 권리·의무 및 책임사항 등을 규정함을 목적으로 합니다.<br>
+                            ※ PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다.<br>
+                             <br>
+                            제2조(정의)<br>
+                            ① 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.<br>
+                            “회사”라 함은 ㈜다산에듀를 의미하며, ㈜다산에듀가 재화 또는 용역(이하 “재화 등”이라 함)을 이용자에게 제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 재화 등을 거래할 수 있도록 설정한 가상의 영업장을
+                            말하며, 아울러 사이버회사을 운영하는 사업자의 의미로도 사용합니다.<br>
+                            “이용자”라 함은 회사에 접속하여 본 약관에 따라 회사가 제공하는 디지털콘텐츠 및 제반 서비스를 이용하는 회원 및 비회원을 말합니다.<br>
+                            “회원”이라 함은 회사의 웹사이트에 접속하여 본 약관에 동의함으로써 회사와 이용계약을 체결하고 아이디(ID)를 부여받은 자로서 회사가 제공하는 서비스를 이용할 수 있는 자를 말합니다.<br>
+                            “비회원”이라 함은 회원에 가입하지 않고 회사가 제공하는 서비스를 이용하는 자를 말합니다.<br>
+                            “디지털콘텐츠”라 함은 회사 웹사이트에서 제공하는 온라인 강좌 및 기타 관련 정보를 의미함으로써, 정보통신이용촉진 및 정보보호 등에 관련 법률 제2조 1항 1호의 규정에 의한 정보통신망에서 사용되는
+                            부호·문자·음성·음향·이미지 또는 영상 등으로 표현된 자료 또는 정보를 말합니다.<br>
+                            “아이디(ID)”라 함은 회원의 식별 및 서비스 이용을 위하여 회원이 정하고 회사가 승인하는 문자 또는 숫자의 조합을 말합니다.<br>
+                            “비밀번호”라 함은 서비스 이용 시, 아이디와 일치되는 회원임을 확인하고 회원 개인정보보호를 위하여, 회원 자신이 정한 문자 또는 숫자의 조합을 말합니다.<br>
+                            “운영자”라 함은 서비스의 전반적인 관리와 원활한 운영을 위하여 회사에서 선정한 사람 또는 회사를 말합니다.<br>
+                            “회원의 게시물”이라 함은 회사의 서비스가 제공되는 웹사이트에 회원이 올린 글, 이미지, 각종 파일 및 링크, 각종 댓글 등의 정보를 의미합니다.<br>
+                            “포인트”라 함은 회사가 웹사이트 내에서 유료 서비스 등을 구매할 수 있는 회사가 정한 가상 결제 수단을 말하고, 그 명칭에 따라 결제 가능한 범위의 차이가 있을 수 있습니다.<br>
+                            “전자우편(Email)”이라 함은 인터넷을 통한 우편 혹은 전기적 매체를 이용한 우편을 말합니다.<br>
+                            ② 전항 각 호에 해당하는 정의 이외의, 기타 용어의 정의에 대하여는 거래 관행 및 관계 법령에 따릅니다.<br>
+                             <br>
+                            제3조 (회사 신원 정보등의 제공)　<br>
+                            ① 회사는 본 약관의 내용과 상호 및 대표자 성명, 영업소 소재지 주소(소비자 의 불만을 처리할 수 있는 곳의 주소를 포함), 전화번호 ․ 모사전송번호(FAX) ․ 전자우편주소, 사업자등록번호, 통신판매업 신고번호
+                            등을 이용자가 쉽게 알 수 있도록 ㈜다산에듀 사이버회사의 초기 서비스화면(전면)에 게시합니다. 다만, 약관의 내용은 이용자가 연결화면을 통하여 볼 수 있도록 할 수 있습니다.　<br>
+                             <br>
+                            제4조 (약관 명시 및 개정 등)<br>
+                            ① 본 약관은 이용자가 약관의 내용에 동의하며 회원가입을 신청하고, 회사가 그 신청에 대하여 승낙함으로써 효력이 발생합니다.<br>
+                            ② 회사는 이용자가 약관에 동의하기에 앞서 약관에 정하여져 있는 내용 중 청약 철회, 배송책임, 환불 조건등과 같은 중요한 내용을 이용자가 이해할 수 있도록 별도의 연결화면으로 제공하여 이용자의 확인을 구하여야
+                            합니다.<br>
+                            ③ 개별 서비스 계약 시 동의한 약관이 본 약관과 저촉되는 경우 개별 서비스 계약 시 동의한 약관이 우선 적용됩니다.<br>
+                            ④ 회사가 본 약관의 내용을 변경하는 경우 적용일자 및 변경 사유를 명시하여 현행약관과 함께 웹사이트의 초기화면 또는 초기화면과의 연결화면을 통해 적용일자 최소 7일 이전부터 적용일자 전일까지 공지합니다. 다만,
+                            이용자에게 불리하게 약관 내용을 변경하는 경우에는 최소한 30일 이상의 사전 유예기간을 두고 공지합니다. 이 경우 회사는 개정 전 내용과 개정 후 내용을 명확하게 비교하여 이용자가 알기 쉽도록 표시합니다.<br>
+                            ⑤ 회사가 이 약관을 개정할 경우에는 그 개정약관은 그 적용일자 이후에 체결되는 계약에만 적용되고 그 이전에 이미 체결된 계약에 대해서는 개정 전의 약관조항이 그대로 적용됩니다. 다만 이미 계약을 체결한 이용자가
+                            개정약관 조항의 적용을 받기 원하는 뜻을 제3항에 의한 개정약관의 공지 기간 내에 회사에 송신하여 회사가 동의를 받은 경우에는 개정약관 조항이 적용됩니다.<br>
+                            ⑥ 회사는 「전자상거래 등에서의 소비자보호에 관한 법률」, 「약관의 규제에 관한 법률」, 「전자문서 및 전자거래기본법」, 「전자금융거래법」, 「전자서명법」, 「정보통신망 이용촉진 및 정보보호 등에 관한 법률」,
+                            「소비자기본법」 등 관련 법을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.<br>
+                            ⑦ 본 약관에서 정하지 아니한 사항과 이 약관의 해석에 관하여는 전자상거래 등에서의 소비자보호에 관한 법률, 약관의 규제 등에 관한 법률, 공정거래위원회가 정하는 전자상거래 등에서의 소비자 보호지침 및 관계법령 또는
+                            상관례에 따릅니다.<br>
+                             <br>
+                            제5조(서비스의 제공 및 변경)<br>
+                            ① 회사는 다음과 같은 업무를 수행합니다. 1. 재화나 용역 또는 디지털콘텐츠에 대한 정보 제공 및 구매 계약의 체결 2. 구매계약이 체결된 재화나 용역의 배송 및 디지털콘텐츠 전송 등의 서비스 3. 다양한 정보의
+                            제공<br>
+                          </div>
+                        </div>
+                        <div class="agree_checkbox">
+                          <div class="checkbox--typeA">
+                            <label for="agree1">
+                              <input type="checkbox" name="checkbox_agree" id="agree1"><em></em> 개인정보 수집동의
+                            </label>
+                          </div>
+                        </div>
+                      </section>
+                      <section class="agree_section">
+                        <div class="agree_title">
+                          <p>시험관련 규정동의 <span class="asterisk">*</span></p>
+                          <button type="button" class="btn_open"></button>
+                        </div>
+                        <div class="agree_cnts">
+                          <div class="text scroll_fixed_y">
+                            제1조(목적) 이 약관은 ㈜다산에듀(이하 “회사”)가 웹사이트(www.e-dasan.net, 모바일을 포함하며 이와 같습니다.)를 통하여 제공하는 교육서비스(이하“서비스”라 하며, 접속 가능한 유·무선
+                            단말기의
+                            종류와는 상관없이 이용 가능한 회사가 제공하는 모든 서비스를 의미합니다)의 이용과 관련하여 회사와 회원 사이에 권리·의무 및 책임사항 등을 규정함을 목적으로 합니다.<br>
+                            ※ PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다.<br>
+                             <br>
+                            제2조(정의)<br>
+                            ① 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.<br>
+                            “회사”라 함은 ㈜다산에듀를 의미하며, ㈜다산에듀가 재화 또는 용역(이하 “재화 등”이라 함)을 이용자에게 제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 재화 등을 거래할 수 있도록 설정한 가상의
+                            영업장을
+                            말하며, 아울러 사이버회사을 운영하는 사업자의 의미로도 사용합니다.<br>
+                            “이용자”라 함은 회사에 접속하여 본 약관에 따라 회사가 제공하는 디지털콘텐츠 및 제반 서비스를 이용하는 회원 및 비회원을 말합니다.<br>
+                            “회원”이라 함은 회사의 웹사이트에 접속하여 본 약관에 동의함으로써 회사와 이용계약을 체결하고 아이디(ID)를 부여받은 자로서 회사가 제공하는 서비스를 이용할 수 있는 자를 말합니다.<br>
+                            “비회원”이라 함은 회원에 가입하지 않고 회사가 제공하는 서비스를 이용하는 자를 말합니다.<br>
+                            “디지털콘텐츠”라 함은 회사 웹사이트에서 제공하는 온라인 강좌 및 기타 관련 정보를 의미함으로써, 정보통신이용촉진 및 정보보호 등에 관련 법률 제2조 1항 1호의 규정에 의한 정보통신망에서 사용되는
+                            부호·문자·음성·음향·이미지 또는 영상 등으로 표현된 자료 또는 정보를 말합니다.<br>
+                            “아이디(ID)”라 함은 회원의 식별 및 서비스 이용을 위하여 회원이 정하고 회사가 승인하는 문자 또는 숫자의 조합을 말합니다.<br>
+                            “비밀번호”라 함은 서비스 이용 시, 아이디와 일치되는 회원임을 확인하고 회원 개인정보보호를 위하여, 회원 자신이 정한 문자 또는 숫자의 조합을 말합니다.<br>
+                            “운영자”라 함은 서비스의 전반적인 관리와 원활한 운영을 위하여 회사에서 선정한 사람 또는 회사를 말합니다.<br>
+                            “회원의 게시물”이라 함은 회사의 서비스가 제공되는 웹사이트에 회원이 올린 글, 이미지, 각종 파일 및 링크, 각종 댓글 등의 정보를 의미합니다.<br>
+                            “포인트”라 함은 회사가 웹사이트 내에서 유료 서비스 등을 구매할 수 있는 회사가 정한 가상 결제 수단을 말하고, 그 명칭에 따라 결제 가능한 범위의 차이가 있을 수 있습니다.<br>
+                            “전자우편(Email)”이라 함은 인터넷을 통한 우편 혹은 전기적 매체를 이용한 우편을 말합니다.<br>
+                            ② 전항 각 호에 해당하는 정의 이외의, 기타 용어의 정의에 대하여는 거래 관행 및 관계 법령에 따릅니다.<br>
+                             <br>
+                            제3조 (회사 신원 정보등의 제공)　<br>
+                            ① 회사는 본 약관의 내용과 상호 및 대표자 성명, 영업소 소재지 주소(소비자 의 불만을 처리할 수 있는 곳의 주소를 포함), 전화번호 ․ 모사전송번호(FAX) ․ 전자우편주소, 사업자등록번호, 통신판매업
+                            신고번호
+                            등을 이용자가 쉽게 알 수 있도록 ㈜다산에듀 사이버회사의 초기 서비스화면(전면)에 게시합니다. 다만, 약관의 내용은 이용자가 연결화면을 통하여 볼 수 있도록 할 수 있습니다.　<br>
+                             <br>
+                            제4조 (약관 명시 및 개정 등)<br>
+                            ① 본 약관은 이용자가 약관의 내용에 동의하며 회원가입을 신청하고, 회사가 그 신청에 대하여 승낙함으로써 효력이 발생합니다.<br>
+                            ② 회사는 이용자가 약관에 동의하기에 앞서 약관에 정하여져 있는 내용 중 청약 철회, 배송책임, 환불 조건등과 같은 중요한 내용을 이용자가 이해할 수 있도록 별도의 연결화면으로 제공하여 이용자의 확인을
+                            구하여야
+                            합니다.<br>
+                            ③ 개별 서비스 계약 시 동의한 약관이 본 약관과 저촉되는 경우 개별 서비스 계약 시 동의한 약관이 우선 적용됩니다.<br>
+                            ④ 회사가 본 약관의 내용을 변경하는 경우 적용일자 및 변경 사유를 명시하여 현행약관과 함께 웹사이트의 초기화면 또는 초기화면과의 연결화면을 통해 적용일자 최소 7일 이전부터 적용일자 전일까지 공지합니다.
+                            다만,
+                            이용자에게 불리하게 약관 내용을 변경하는 경우에는 최소한 30일 이상의 사전 유예기간을 두고 공지합니다. 이 경우 회사는 개정 전 내용과 개정 후 내용을 명확하게 비교하여 이용자가 알기 쉽도록
+                            표시합니다.<br>
+                            ⑤ 회사가 이 약관을 개정할 경우에는 그 개정약관은 그 적용일자 이후에 체결되는 계약에만 적용되고 그 이전에 이미 체결된 계약에 대해서는 개정 전의 약관조항이 그대로 적용됩니다. 다만 이미 계약을 체결한
+                            이용자가
+                            개정약관 조항의 적용을 받기 원하는 뜻을 제3항에 의한 개정약관의 공지 기간 내에 회사에 송신하여 회사가 동의를 받은 경우에는 개정약관 조항이 적용됩니다.<br>
+                            ⑥ 회사는 「전자상거래 등에서의 소비자보호에 관한 법률」, 「약관의 규제에 관한 법률」, 「전자문서 및 전자거래기본법」, 「전자금융거래법」, 「전자서명법」, 「정보통신망 이용촉진 및 정보보호 등에 관한
+                            법률」,
+                            「소비자기본법」 등 관련 법을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.<br>
+                            ⑦ 본 약관에서 정하지 아니한 사항과 이 약관의 해석에 관하여는 전자상거래 등에서의 소비자보호에 관한 법률, 약관의 규제 등에 관한 법률, 공정거래위원회가 정하는 전자상거래 등에서의 소비자 보호지침 및
+                            관계법령 또는
+                            상관례에 따릅니다.<br>
+                             <br>
+                            제5조(서비스의 제공 및 변경)<br>
+                            ① 회사는 다음과 같은 업무를 수행합니다. 1. 재화나 용역 또는 디지털콘텐츠에 대한 정보 제공 및 구매 계약의 체결 2. 구매계약이 체결된 재화나 용역의 배송 및 디지털콘텐츠 전송 등의 서비스 3.
+                            다양한 정보의
+                            제공<br>
+                          </div>
+                        </div>
+                        <div class="agree_checkbox">
+                          <div class="checkbox--typeA">
+                            <label for="agree2">
+                              <input type="checkbox" name="checkbox_agree" id="agree2"><em></em> 시험관련 규정동의
+                            </label>
+                          </div>
+                        </div>
+                      </section>
+                      <section class="agree_section">
+                        <div class="agree_title">
+                          <p>개인정보 처리위탁동의 <span class="asterisk">*</span></p>
+                          <button type="button" class="btn_open"></button>
+                        </div>
+                        <div class="agree_cnts">
+                          <div class="text scroll_fixed_y">
+                            제1조(목적) 이 약관은 ㈜다산에듀(이하 “회사”)가 웹사이트(www.e-dasan.net, 모바일을 포함하며 이와 같습니다.)를 통하여 제공하는 교육서비스(이하“서비스”라 하며, 접속 가능한 유·무선
+                            단말기의
+                            종류와는 상관없이 이용 가능한 회사가 제공하는 모든 서비스를 의미합니다)의 이용과 관련하여 회사와 회원 사이에 권리·의무 및 책임사항 등을 규정함을 목적으로 합니다.<br>
+                            ※ PC통신, 무선 등을 이용하는 전자상거래에 대해서도 그 성질에 반하지 않는 한 이 약관을 준용합니다.<br>
+                             <br>
+                            제2조(정의)<br>
+                            ① 본 약관에서 사용하는 용어의 정의는 다음과 같습니다.<br>
+                            “회사”라 함은 ㈜다산에듀를 의미하며, ㈜다산에듀가 재화 또는 용역(이하 “재화 등”이라 함)을 이용자에게 제공하기 위하여 컴퓨터 등 정보통신설비를 이용하여 재화 등을 거래할 수 있도록 설정한 가상의
+                            영업장을
+                            말하며, 아울러 사이버회사을 운영하는 사업자의 의미로도 사용합니다.<br>
+                            “이용자”라 함은 회사에 접속하여 본 약관에 따라 회사가 제공하는 디지털콘텐츠 및 제반 서비스를 이용하는 회원 및 비회원을 말합니다.<br>
+                            “회원”이라 함은 회사의 웹사이트에 접속하여 본 약관에 동의함으로써 회사와 이용계약을 체결하고 아이디(ID)를 부여받은 자로서 회사가 제공하는 서비스를 이용할 수 있는 자를 말합니다.<br>
+                            “비회원”이라 함은 회원에 가입하지 않고 회사가 제공하는 서비스를 이용하는 자를 말합니다.<br>
+                            “디지털콘텐츠”라 함은 회사 웹사이트에서 제공하는 온라인 강좌 및 기타 관련 정보를 의미함으로써, 정보통신이용촉진 및 정보보호 등에 관련 법률 제2조 1항 1호의 규정에 의한 정보통신망에서 사용되는
+                            부호·문자·음성·음향·이미지 또는 영상 등으로 표현된 자료 또는 정보를 말합니다.<br>
+                            “아이디(ID)”라 함은 회원의 식별 및 서비스 이용을 위하여 회원이 정하고 회사가 승인하는 문자 또는 숫자의 조합을 말합니다.<br>
+                            “비밀번호”라 함은 서비스 이용 시, 아이디와 일치되는 회원임을 확인하고 회원 개인정보보호를 위하여, 회원 자신이 정한 문자 또는 숫자의 조합을 말합니다.<br>
+                            “운영자”라 함은 서비스의 전반적인 관리와 원활한 운영을 위하여 회사에서 선정한 사람 또는 회사를 말합니다.<br>
+                            “회원의 게시물”이라 함은 회사의 서비스가 제공되는 웹사이트에 회원이 올린 글, 이미지, 각종 파일 및 링크, 각종 댓글 등의 정보를 의미합니다.<br>
+                            “포인트”라 함은 회사가 웹사이트 내에서 유료 서비스 등을 구매할 수 있는 회사가 정한 가상 결제 수단을 말하고, 그 명칭에 따라 결제 가능한 범위의 차이가 있을 수 있습니다.<br>
+                            “전자우편(Email)”이라 함은 인터넷을 통한 우편 혹은 전기적 매체를 이용한 우편을 말합니다.<br>
+                            ② 전항 각 호에 해당하는 정의 이외의, 기타 용어의 정의에 대하여는 거래 관행 및 관계 법령에 따릅니다.<br>
+                             <br>
+                            제3조 (회사 신원 정보등의 제공)　<br>
+                            ① 회사는 본 약관의 내용과 상호 및 대표자 성명, 영업소 소재지 주소(소비자 의 불만을 처리할 수 있는 곳의 주소를 포함), 전화번호 ․ 모사전송번호(FAX) ․ 전자우편주소, 사업자등록번호, 통신판매업
+                            신고번호
+                            등을 이용자가 쉽게 알 수 있도록 ㈜다산에듀 사이버회사의 초기 서비스화면(전면)에 게시합니다. 다만, 약관의 내용은 이용자가 연결화면을 통하여 볼 수 있도록 할 수 있습니다.　<br>
+                             <br>
+                            제4조 (약관 명시 및 개정 등)<br>
+                            ① 본 약관은 이용자가 약관의 내용에 동의하며 회원가입을 신청하고, 회사가 그 신청에 대하여 승낙함으로써 효력이 발생합니다.<br>
+                            ② 회사는 이용자가 약관에 동의하기에 앞서 약관에 정하여져 있는 내용 중 청약 철회, 배송책임, 환불 조건등과 같은 중요한 내용을 이용자가 이해할 수 있도록 별도의 연결화면으로 제공하여 이용자의 확인을
+                            구하여야
+                            합니다.<br>
+                            ③ 개별 서비스 계약 시 동의한 약관이 본 약관과 저촉되는 경우 개별 서비스 계약 시 동의한 약관이 우선 적용됩니다.<br>
+                            ④ 회사가 본 약관의 내용을 변경하는 경우 적용일자 및 변경 사유를 명시하여 현행약관과 함께 웹사이트의 초기화면 또는 초기화면과의 연결화면을 통해 적용일자 최소 7일 이전부터 적용일자 전일까지 공지합니다.
+                            다만,
+                            이용자에게 불리하게 약관 내용을 변경하는 경우에는 최소한 30일 이상의 사전 유예기간을 두고 공지합니다. 이 경우 회사는 개정 전 내용과 개정 후 내용을 명확하게 비교하여 이용자가 알기 쉽도록
+                            표시합니다.<br>
+                            ⑤ 회사가 이 약관을 개정할 경우에는 그 개정약관은 그 적용일자 이후에 체결되는 계약에만 적용되고 그 이전에 이미 체결된 계약에 대해서는 개정 전의 약관조항이 그대로 적용됩니다. 다만 이미 계약을 체결한
+                            이용자가
+                            개정약관 조항의 적용을 받기 원하는 뜻을 제3항에 의한 개정약관의 공지 기간 내에 회사에 송신하여 회사가 동의를 받은 경우에는 개정약관 조항이 적용됩니다.<br>
+                            ⑥ 회사는 「전자상거래 등에서의 소비자보호에 관한 법률」, 「약관의 규제에 관한 법률」, 「전자문서 및 전자거래기본법」, 「전자금융거래법」, 「전자서명법」, 「정보통신망 이용촉진 및 정보보호 등에 관한
+                            법률」,
+                            「소비자기본법」 등 관련 법을 위배하지 않는 범위에서 이 약관을 개정할 수 있습니다.<br>
+                            ⑦ 본 약관에서 정하지 아니한 사항과 이 약관의 해석에 관하여는 전자상거래 등에서의 소비자보호에 관한 법률, 약관의 규제 등에 관한 법률, 공정거래위원회가 정하는 전자상거래 등에서의 소비자 보호지침 및
+                            관계법령 또는
+                            상관례에 따릅니다.<br>
+                             <br>
+                            제5조(서비스의 제공 및 변경)<br>
+                            ① 회사는 다음과 같은 업무를 수행합니다. 1. 재화나 용역 또는 디지털콘텐츠에 대한 정보 제공 및 구매 계약의 체결 2. 구매계약이 체결된 재화나 용역의 배송 및 디지털콘텐츠 전송 등의 서비스 3.
+                            다양한 정보의
+                            제공<br>
+                          </div>
+                        </div>
+                        <div class="agree_checkbox">
+                          <div class="checkbox--typeA">
+                            <label for="agree3">
+                              <input type="checkbox" name="checkbox_agree" id="agree3"><em></em> 개인정보 처리위탁동의
+                            </label>
+                          </div>
+                        </div>
+                      </section>
+                      <div class="btn_area">
+                        <button type="button" id="btnConfirm" class="btn btn-big btn-w100p btn_gradient" disabled>확인</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="receipt_box">
+                  <div class="sub_title">
+                    <h5>개인정보 확인</h5>
+                  </div>
+                  <div class="receipt_info_cnts">
+                    <div class="tbl_list--typeB">
+                      <table>
+                        <colgroup>
+                          <col style="width: 117px">
+                          <col style="width: auto">
+                        </colgroup>
+                        <tbody>
+                          <tr>
+                            <td>사진</td>
+                            <td>
+                              <img src="../_img/common/business_card_img.png" alt="">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>이름</td>
+                            <td>홍 길동</td>
+                          </tr>
+                          <tr>
+                            <td>영문이름</td>
+                            <td>Hong Gil Dong</td>
+                          </tr>
+                          <tr>
+                            <td>생년월일</td>
+                            <td>1990.12.31</td>
+                          </tr>
+                          <tr>
+                            <td>휴대폰번호</td>
+                            <td>000-0000-0000</td>
+                          </tr>
+                          <tr>
+                            <td>이메일</td>
+                            <td>00000@gmail.com</td>
+                          </tr>
+                          <tr>
+                            <td>성별</td>
+                            <td>남성</td>
+                          </tr>
+                          <tr>
+                            <td>주소</td>
+                            <td>서울시 강남구 00동 000-00</td>
+                          </tr>
+                          <tr>
+                            <td>소속 및 직위</td>
+                            <td>00소속 / 0000</td>
+                          </tr>
+                          <tr>
+                            <td>전공여부</td>
+                            <td>00학과</td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+                <div class="receipt_box">
+                  <div class="sub_title">
+                    <h5>결제수단 선택</h5>
+                  </div>
+                  <div class="receipt_info_cnts">
+                    <div class="select_payment">
+                      <div class="radio--typeA">
+                        <label for="chk1">
+                          <input type="radio" name="radio_payment" id="chk1" value="" checked><em></em> 신용카드 / 제휴카드
+                        </label>
+                      </div>
+                      <div class="radio--typeA">
+                        <label for="chk2">
+                          <input type="radio" name="radio_payment" id="chk2" value=""><em></em> 실시간 계좌이체
+                        </label>
+                      </div>
+                      <div class="radio--typeA">
+                        <label for="chk3">
+                          <input type="radio" name="radio_payment" id="chk3" value=""><em></em> 휴대폰 결제
+                        </label>
+                      </div>
+                      <div class="radio--typeA">
+                        <label for="chk4">
+                          <input type="radio" name="radio_payment" id="chk4" value=""><em></em> <img src="../_img/subpage/logo_payco.png" alt="">
+                        </label>
+                      </div>
+                      <div class="radio--typeA">
+                        <label for="chk5">
+                          <input type="radio" name="radio_payment" id="chk5" value=""><em></em> <img
+                            src="../_img/subpage/logo_kakao_pay.png" alt="">
+                        </label>
+                      </div>
+                      <div class="radio--typeA">
+                        <label for="chk6">
+                          <input type="radio" name="radio_payment" id="chk6" value=""><em></em> <img
+                            src="../_img/subpage/logo_naver_pay.png" alt="">
+                        </label>
+                      </div>
+                      <div class="radio--typeA">
+                        <label for="chk7">
+                          <input type="radio" name="radio_payment" id="chk7" value=""><em></em> <img
+                            src="../_img/subpage/logo_toss_pay.png" alt="">
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="receipt_payment_info">
+                <div class="sub_title">
+                  <h5>결제정보</h5>
+                </div>
+                <div class="tbl_list--typeB mt16">
+                  <table>
+                    <colgroup>
+                      <col style="width: 120px">
+                      <col style="width: auto">
+                    </colgroup>
+                    <tbody>
+                      <tr>
+                        <td>시험일</td>
+                        <td>2024.02.02</td>
+                      </tr>
+                      <tr>
+                        <td>합격자 발표일</td>
+                        <td>2024.02.02</td>
+                      </tr>
+                      <tr>
+                        <td>평가장</td>
+                        <td>세종시 어진동</td>
+                      </tr>
+                      <tr>
+                        <td>준비물</td>
+                        <td>수험표, 신분증, PLC</td>
+                      </tr>
+                      <tr>
+                        <td>응시료</td>
+                        <td>00,000원 (부가세 포함)</td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr>
+                        <td>결제예정금액</td>
+                        <td>00,000원</td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+                <div class="btn_area mt38">
+                  <button type="button" class="btn btn-big btn-w100p btn_gradient">지금 결제하기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer_top">
+          <div class="footer_logo">
+            <img src="../_img/common/logo_white.png" alt="푸터 로고" height="40">
+          </div>
+          <ul class="footer_menu">
+            <li class="footer-link"><a href="#">회사소개</a></li>
+            <li class="footer-link"><a href="#">오시는 길</a></li>
+            <li class="footer-link"><a href="#" class="fw600">개인정보처리방침</a></li>
+            <li class="footer-link"><a href="#">이용약관</a></li>
+          </ul>
+        </div>
+        <div class="footer_bottom">
+          <div class="footer_company_info">
+            <div class="company_info">
+              <ul class="company_info_ul bdr">
+                <li class="company_info_li"><span>회사명</span>00회사</li>
+                <li class="company_info_li"><span>대표명</span>김대표</li>
+                <li class="company_info_li"><span>사업자등록번호</span>000-00-00000</li>
+                <li class="company_info_li"><span>통신판매업</span>제0000-0000-0000호</li>
+              </ul>
+              <ul class="company_info_ul">
+                <li class="company_info_li"><span>주소</span>서울시 00구 00로 00층 [00000]</li>
+              </ul>
+              <ul class="company_info_ul">
+                <li class="company_info_li"><span>TEL</span>000-000-0000</li>
+                <li class="company_info_li"><span>E-mail</span>pcq@gmail.com</li>
+                <li class="company_info_li"><span>FAX</span>000-0000-0000</li>
+              </ul>
+            </div>
+            <p class="copyright">copyright &copy; pcq. ALL Rights Reserved.</p>
+          </div>
+          <div class="footer_family_site">
+            <select name="" id="" class="nice-select select--typeA sm">
+              <option value="">관련사이트</option>
+              <option value="">다산에듀</option>
+              <option value="">PCQ</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="scroll_top"></div>
+  </div>
+  <!-- 위치보기 모달 시작 -->
+  <div id="modal-show-location" class="modal modal--typeA">
+    <div class="modal__inner lg">
+      <div class="modal__close">
+        <button type="button" class="btn_modal_close" onclick="closeModal('modal-show-location')"></button>
+      </div>
+      <div class="modal__content">
+        <div class="location_content">
+          <div class="exam_loc_item">
+            <div class="exam_name_btns">
+              <h4>다산에듀 한티점</h4>
+            </div>
+            <div class="exam_loc_info">
+              <p class="address">서울특별시 강남구 강남대로 123 - 2길 12 강남빌딩 5층</p>
+              <ul class="info_list">
+                <li>02-000-0000</li>
+                <li>00000@gmail.com</li>
+              </ul>
+            </div>
+          </div>
+          <div class="exam_loc_map">
+            <!-- 지도 개발 할때 인라인 스타일 제거 -->
+            <div class="map" style="background-color: #DCDCDC;"></div>
+            <p class="error mt16">*고사장의 정확한 위치는 지도를 이용하여 확인하시기 바랍니다.</p>
+          </div>
+        </div>
+      </div>
+      <div class="modal__btns">
+        <button type="button" class="btn_modal btn_naver_map">NAVER 지도 바로가기</button>
+        <button type="button" class="btn_modal btn_kakao_map">kakao 지도 바로가기</button>
+      </div>
+    </div>
+  </div>
+  <!-- 위치보기 모달 끝 -->
+  <script>
+    $(function() {
+      $('.agree_section .btn_open').click(function() {
+        $(this).toggleClass('active')
+        $(this).parents('.agree_title').siblings('.agree_cnts').slideToggle()
+      })
+
+      $("#chkAll").click(function () {
+        if ($("#chkAll").is(":checked")) {
+          $("input[name=checkbox_agree]").prop("checked", true);
+          $("#btnConfirm").attr('disabled', false)
+        }
+        else { 
+          $("input[name=checkbox_agree]").prop("checked", false);
+          $("#btnConfirm").attr('disabled', true)
+        } 
+      });
+
+      $("input[name=checkbox_agree]").click(function () {
+        var total = $("input[name=checkbox_agree]").length;
+        var checked = $("input[name=checkbox_agree]:checked").length;
+
+        if (total != checked)  {
+          $("#chkAll").prop("checked", false);
+          $("#btnConfirm").attr('disabled', true)
+        }
+        else {
+          $("#chkAll").prop("checked", true);
+          $("#btnConfirm").attr('disabled', false)
+        }
+      });
+    })
+  </script>
+</body>
+
+</html>

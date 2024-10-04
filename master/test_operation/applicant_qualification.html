@@ -1,0 +1,836 @@
+<!doctype html>
+<html lang="en" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none"
+  data-preloader="disable" data-theme="default" data-theme-colors="default">
+
+<head>
+
+  <meta charset="utf-8" />
+  <title>PCQ | 관리자</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+  <meta content="Themesbrand" name="author" />
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="../../_img/common/favicon.ico">
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PCQ" />
+  <meta property="og:description" content="PCQ" />
+  <meta property="og:image" content="../../_img/common/opengraph.png" />
+  <!-- jQuery CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <!-- jsvectormap css -->
+  <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
+  <!--Swiper slider css-->
+  <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+  <!-- Layout config Js -->
+  <script src="assets/js/layout.js"></script>
+  <link rel="stylesheet" href="../_css/reset.css">
+  <link rel="stylesheet" href="../../_css/attribute.css">
+  <!-- Bootstrap Css -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <!-- Icons Css -->
+  <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+  <!-- App Css-->
+  <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" />
+  <!-- custom Css-->
+  <link href="../assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+  <!-- admin.css -->
+  <link href="../_css/admin.css" rel="stylesheet" type="text/css" />
+  <script src="../_js/common.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Begin page -->
+  <div id="layout-wrapper">
+
+
+    <!-- 왼쪽 메뉴 영역 -->
+    <div class="app-menu navbar-menu">
+      <!-- LOGO -->
+      <div class="navbar-brand-box">
+        <!-- Dark Logo-->
+        <a href="index.html" class="logo logo-dark">
+          <span class="logo-sm">
+            <img src="../_img/common/logo-sm.png" alt="" height="22">
+          </span>
+          <span class="logo-lg">
+            <img src="../_img/common/logo_white.png" alt="" height="34">
+          </span>
+        </a>
+
+        <a href="index.html" class="logo logo-light">
+          <span class="logo-sm">
+            <img src="../_img/common/logo-sm.png" alt="" height="22">
+          </span>
+          <span class="logo-lg">
+            <img src="../_img/common/logo_white.png" alt="" height="34">
+          </span>
+        </a>
+        <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+          id="vertical-hover">
+          <i class="ri-record-circle-line"></i>
+        </button>
+      </div>
+
+      <div id="scrollbar">
+        <div class="container-fluid">
+          <div id="two-column-menu">
+          </div>
+          <div class="favorite_menus">
+            <button type="button" class="btn_favorite">
+              <i class="ri-star-fill"></i> 즐겨찾기
+            </button>
+            <ul class="favorite_list">
+              <li>
+                <button type="button" class="btn_mark active"></button>
+                <a href="#">감독관 정보관리</a>
+              </li>
+              <li>
+                <button type="button" class="btn_mark active"></button>
+                <a href="#">연계(협약)기관관리</a>
+              </li>
+              <li>
+                <button type="button" class="btn_mark active"></button>
+                <a href="#">사용자관리</a>
+              </li>
+              <li>
+                <button type="button" class="btn_mark active"></button>
+                <a href="#">검정마스터등록</a>
+              </li>
+            </ul>
+          </div>
+          <ul class="navbar-nav" id="navbar-nav">
+            <li class="menu-title"><span data-key="t-menu">Menu</span></li>
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu1" data-bs-toggle="collapse" role="button" aria-expanded="true"
+                aria-controls="sidebarMenu1">
+                <span data-key="t-dashboards">기준정보</span>
+              </a>
+              <div class="collapse menu-dropdown show" id="sidebarMenu1">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link active"> 사용자관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 코드관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 수입 기준관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 지출 기준관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 가상계좌번호 관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 자격증 문구관리</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">연계(협약)기관관리</a>
+                  </li>
+                  <li class="nav-item">
+                    <a hhref="#" class="nav-link">사용자변 권한관리</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu2" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu2">
+                <span data-key="t-apps">인력관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu2">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 감독관 정보관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 운영자 정보관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 시설관리자 정보관리 </a>
+                  </li>
+                </ul>
+              </div>
+          
+            </li>
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu3" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu3">
+                <span data-key="t-apps">시설관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu3">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">시험장 정보관리</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu4" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu4">
+                <span data-key="t-apps">검정과정관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu4">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">검정마스터등록</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu5" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu5">
+                <span data-key="t-apps">검정운영관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu5">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#sidebarMenu5_1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                      aria-controls="sidebarMenu5_1">
+                      검정차수(기수)관리
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarMenu5_1">
+                      <ul class="nav nav-sm flex-column">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link"> 기본정보 </a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link"> 차수별 지출내역
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#sidebarMenu5_2" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                      aria-controls="sidebarMenu5_2">
+                      차수(기수)별 평가자 관리
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarMenu5_2">
+                      <ul class="nav nav-sm flex-column">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link"> 검정신청자관리 </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu6" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu6">
+                <span data-key="t-apps">검정결과관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu6">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#sidebarMenu6_1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                      aria-controls="sidebarMenu6_1">
+                      차수(기수)별 결과관리
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarMenu6_1">
+                      <ul class="nav nav-sm flex-column">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link"> 검정결과처리 </a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link"> 합격처리 </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu7" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu7">
+                <span data-key="t-apps">지출관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu7">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">재료비 지출내역</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">인건비 지출내역</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">시설사용료 지출내역</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">기타 제반비용 지출내역</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">지출내역 종합관리</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu8" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu8">
+                <span data-key="t-apps">회원정보관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu8">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">회원정보관리</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu9" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu9">
+                <span data-key="t-apps">보수교육 관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu9">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">보수교육과정 등록</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">보수교육 운영</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">보수교육 운영 결과</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu10" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu10">
+                <span data-key="t-apps">문자 및 이메일 발송</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu10">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">문자 발송</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">이메일 발송</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Sidebar -->
+      </div>
+      <div class="sidebar-background"></div>
+    </div>
+    <div class="vertical-overlay"></div>
+    <!-- 오른쪽 컨텐츠 영역 -->
+    <div class="main-content">
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div id="page-topbar">
+              <div class="layout-width">
+                <div class="navbar-header">
+                  <!-- tab -->
+                  <div class="d-flex header_tabs">
+                    <ul class="header_tabs_ul" role="tablist">
+                      <li class="nav-item active">
+                        <a class="nav-link" data-bs-toggle="tab" href="#" role="tab">
+                          검정신청자관리
+                        </a>
+                        <button type="button">
+                          <i class="ri-close-line"></i>
+                        </button>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#" role="tab">
+                          코드관리
+                          <button type="button">
+                            <i class="ri-close-line"></i>
+                          </button>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#" role="tab">
+                          수입 기준관리
+                          <button type="button">
+                            <i class="ri-close-line"></i>
+                          </button>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="d-flex align-items-center">
+                    <div class="dropdown ms-sm-3 header-item topbar-user">
+                      <button type="button" class="btn material-shadow-none" id="page-header-user-dropdown"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="d-flex align-items-center">
+                          <img class="rounded-circle header-profile-user" src="../_img/common/logo-sm.png"
+                            style="object-fit: none;" alt="Header Avatar">
+                          <span class="text-start ms-xl-2">
+                            <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">홍길동</span>
+                            <span class="d-none d-xl-block ms-1 fs-12 user-name-sub-text">관리자</span>
+                          </span>
+                        </span>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-end">
+                        <!-- item-->
+                        <h6 class="dropdown-header">Welcome 관리자!</h6>
+                        <a class="dropdown-item" href="pages-profile.html"><i
+                            class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span
+                            class="align-middle">Profile</span></a>
+                        <a class="dropdown-item" href="pages-profile-settings.html"><i
+                            class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i> <span
+                            class="align-middle">Settings</span></a>
+                        <a class="dropdown-item" href="auth-logout-basic.html"><i
+                            class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span class="align-middle"
+                            data-key="t-logout">Logout</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contents active">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-header align-items-center d-flex gap-2">
+                      <button type="button" class="btn_mark"></button>
+                      <h4 class="card-title mb-0 flex-grow-1">검정신청자 검색</h4>
+                    </div><!-- end card header -->
+                    <div class="card-body">
+                      <div class="live-preview">
+                        <form action="javascript:void(0);" class="form_search">
+                          <div class="row gx-3 gy-2 mb-3 align-items-center">
+                            <h4 class="form_title">년도</h4>
+                            <div class="select_input_box w-auto col-auto">
+                              <div class="col-auto">
+                                <select class="form-select" id="srhField" name="srhField">
+                                  <option value="">2024년</option>
+                                  <option value="">2023년</option>
+                                  <option value="">2022년</option>
+                                </select>
+                              </div>
+                            </div>
+                            <h4 class="form_title">급수</h4>
+                            <div class="select_input_box w-auto col-auto">
+                              <div class="col-auto">
+                                <select class="form-select" id="srhField" name="srhField">
+                                  <option value="">전체</option>
+                                  <option value="">1급</option>
+                                  <option value="">2급</option>
+                                  <option value="">3급</option>
+                                </select>
+                              </div>
+                            </div>
+                            <h4 class="form_title">상시여부</h4>
+                            <div class="select_input_box w-auto col-auto">
+                              <div class="col-auto">
+                                <select class="form-select" id="srhField" name="srhField">
+                                  <option value="">전체</option>
+                                  <option value="">정규</option>
+                                  <option value="">상시</option>
+                                </select>
+                              </div>
+                            </div>
+                            <h4 class="form_title">검정개설여부</h4>
+                            <div class="select_input_box w-auto col-auto">
+                              <div class="col-auto">
+                                <select class="form-select" id="srhField" name="srhField">
+                                  <option value="">전체</option>
+                                  <option value="">개설</option>
+                                  <option value="">폐설</option>
+                                </select>
+                              </div>
+                            </div>
+                            <h4 class="form_title">개설차수</h4>
+                            <div class="select_input_box w-auto col-auto">
+                              <div class="col-auto">
+                                <input type="text" class="form-control">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="search_btns">
+                            <button type="button" class="btn w-sm btn_detail"><span>조회</span></button>
+                          </div>
+                          <!--end row-->
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div> <!-- end col -->
+              </div>
+
+              <div class="card">
+                <div class="card-header align-items-center d-flex">
+                  <h4 class="card-title mb-0 flex-grow-1">과정차수정보 조회</h4>
+                </div>
+                <div class="card-body">
+                  <div class="list_info">
+                    <span class="fs-6 flex-shrink-0">총 <b>10</b>건</span>
+                    <div class="list_sort_btns">
+                      <div class="d-flex align-items-center gap-2">
+                        <button class="btn w-sm btn-md btn_detail"><span>조회</span></button>
+                        <button class="btn w-sm btn-md btn_new" data-bs-toggle="modal"
+                          data-bs-target="#modal_test_order_reg">신규</button>
+                        <button class="btn w-sm btn-md btn_delete">삭제</button>
+                        <button class="btn w-sm btn-md btn_save">저장</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="live-preview mt-4">
+                    <div class="table-scrollY">
+                      <div class="table-responsive table-scrolY__wrap table-card m-0">
+                        <table class="table align-middle table-nowrap table-striped-columns mb-0 table_list">
+                          <colgroup>
+                            <col style="width: 40px;">
+                            <col style="width: 80px;">
+                            <col style="width: 80px;">
+                            <col style="width: 110px;">
+                            <col style="width: 110px;">
+                            <col style="width: auto;">
+                          </colgroup>
+                          <thead class="table-light">
+                            <tr>
+                              <th scope="col" rowspan="2">No</th>
+                              <th scope="col" rowspan="2">년도</th>
+                              <th scope="col" rowspan="2">차수</th>
+                              <th scope="col" rowspan="2">검정과정코드</th>
+                              <th scope="col" rowspan="2">검정(자격)명</th>
+                              <th scope="col" rowspan="2">급수</th>
+                              <th scope="col" rowspan="2">과정상태</th>
+                              <th scope="col" colspan="2">접수기간</th>
+                              <th scope="col" colspan="2">추가접수기간</th>
+                              <th scope="col" colspan="2">원서수정기간</th>
+                              <th scope="col" colspan="2">유효기간</th>
+                              <th scope="col" rowspan="2">검정일</th>
+                              <th scope="col" rowspan="2">신청인원</th>
+                              <th scope="col" rowspan="2">합격인원</th>
+                              <th scope="col" rowspan="2">교육장소</th>
+                              <th scope="col" rowspan="2">개설여부</th>
+                            </tr>
+                            <tr>
+                              <th scope="col">시작일</th>
+                              <th scope="col">종료일</th>
+                              <th scope="col">시작일</th>
+                              <th scope="col">종료일</th>
+                              <th scope="col">시작일</th>
+                              <th scope="col">종료일</th>
+                              <th scope="col">시작일</th>
+                              <th scope="col">종료일</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+
+                    <div class="table-scrollY">
+                      <div class="table-responsive table-scrolY__wrap table-card m-0 mt-3">
+                        <table class="table align-middle table-nowrap table-striped-columns mb-0 table_list">
+                          <colgroup>
+                            <col style="width: 50px;">
+                            <col style="width: 80px;">
+                            <col style="width: 110px;">
+                            <col style="width: auto;">
+                          </colgroup>
+                          <thead class="table-light">
+                            <tr>
+                              <th scope="col">
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="cardtableCheck">
+                                  <label class="form-check-label" for="cardtableCheck"></label>
+                                </div>
+                              </th>
+                              <th scope="col">No</th>
+                              <th scope="col">접수번호</th>
+                              <th scope="col">신청일</th>
+                              <th scope="col">성명</th>
+                              <th scope="col">소속기관</th>
+                              <th scope="col">직위</th>
+                              <th scope="col">핸드폰</th>
+                              <th scope="col">이메일</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                  <label class="form-check-label" for="chk1_1"></label>
+                                </div>
+                              </td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                  <label class="form-check-label" for="chk1_1"></label>
+                                </div>
+                              </td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <div class="form-check">
+                                  <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                  <label class="form-check-label" for="chk1_1"></label>
+                                </div>
+                              </td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <div class="card-body">
+                  <ul class="nav nav-pills nav-custom-outline nav-primary mb-3" role="tablist">
+                    <li class="nav-item waves-effect waves-light">
+                      <a class="nav-link " data-bs-toggle="tab" href="#navi_tab1" role="tab">기본정보</a>
+                    </li>
+                    <li class="nav-item waves-effect waves-light">
+                      <a class="nav-link " data-bs-toggle="tab" href="#navi_tab2" role="tab">검정이력</a>
+                    </li>
+                    <li class="nav-item waves-effect waves-light">
+                      <a class="nav-link active" data-bs-toggle="tab" href="#navi_tab3" role="tab">엑셀업로드</a>
+                    </li>
+                  </ul>
+                  <div class="tab-content text-muted">
+                    <!-- 기본정보 -->
+                    <div class="tab-pane " id="navi_tab1" role="tabpanel">
+                      기본정보
+                    </div>
+                    <!-- 검정이력 -->
+                    <div class="tab-pane " id="navi_tab2" role="tabpanel">
+                      검정이력
+                    </div>
+                    <!-- 엑셀업로드 -->
+                    <div class="tab-pane active" id="navi_tab3" role="tabpanel">
+                      <div class="menu_title">
+                        <div class="sub_title mb0">
+                          <h5>신청자 엑셀 업로드</h5>
+                        </div>
+                        <div class="d-flex justify-content-end align-items-center gap-2">
+                          <button class="btn w-sm btn-md btn_excel" data-bs-toggle="modal"
+                          data-bs-target="#modal_file_upload">엑셀파일 업로드</button>
+                          <button class="btn w-sm btn-md btn_new">중복체크</button>
+                        </div>
+                      </div>
+                      <div class="mt-3">
+                        <div class="table-scrollY">
+                          <div class="table-responsive table-scrolY__wrap table-card m-0">
+                            <table class="table align-middle table-nowrap table-striped-columns mb-0 table_list">
+                              <colgroup>
+                                <col style="width: 50px;">
+                                <col style="width: 180px;">
+                                <col style="width: auto;">
+                              </colgroup>
+                              <thead class="table-light">
+                                <tr>
+                                  <th scope="col">No</th>
+                                  <th scope="col">접수번호</th>
+                                  <th scope="col">신청일</th>
+                                  <th scope="col">성명</th>
+                                  <th scope="col">소속기관</th>
+                                  <th scope="col">직위</th>
+                                  <th scope="col">핸드폰</th>
+                                  <th scope="col">이메일</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                                <tr>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                  <td></td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 엑셀파일 업로드 모달 시작 -->
+          <div id="modal_file_upload" class="modal fade" tabindex="-1" aria-hidden="true" style="display: none;">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+              <div class="modal-content border-0 overflow-hidden">
+                <div class="modal-header p-3">
+                  <h4 class="card-title fw-bold mb-0">엑셀 업로드</h4>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pt-0">
+                  <div class="modal_table_content" style="min-height: 150px;">
+                    <div class="input_file_custom">
+                      <label for="upload" class="mb-0 btn w-sm btn-md btn_new">파일 선택</label>
+                      <input type="file" id="upload">
+                    </div>
+                    <div class="d-flex align-items-center gap-2 mt-2">
+                      <span>선택된 파일</span>
+                      <div>
+                        <ul class="m-0 p-0">
+                          <li class="fw-bold">양식_업로드_테스트.xlsx</li>
+                        </ul>
+                      </div>
+                    </div>
+          
+                  </div>
+                  <div class="d-flex justify-content-center align-items-center gap-2 pt-3">
+                    <div class="input_file_custom">
+                      <label for="file" class="mb-0 btn w-sm btn-md btn_excel">양식 다운로드</label>
+                      <input type="file" id="file">
+                    </div>
+                    <button class="btn w-sm btn-md btn_save">저장</button>
+                  </div>
+                </div>
+              </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+          </div>
+          <!-- 엑셀파일 업로드 모달 끝 -->
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--start back-to-top-->
+  <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+  <!--end back-to-top-->
+
+  <!--preloader-->
+  <div id="preloader">
+    <div id="status">
+      <div class="spinner-border text-primary avatar-sm" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/libs/node-waves/waves.min.js"></script>
+  <script src="../assets/libs/feather-icons/feather.min.js"></script>
+  <script src="../assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+  <script src="../assets/js/plugins.js"></script>
+  <!-- App js -->
+  <script src="../assets/js/app.js"></script>
+</body>
+
+</html>

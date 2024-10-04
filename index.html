@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCQ</title>
+  <!-- Favicon -->
+  <link rel="icon" href="./_img/common/favicon.ico">
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PCQ" />
+  <meta property="og:description" content="PCQ" />
+  <meta property="og:image" content="./_img/common/opengraph.png" />
+  <!-- Font -->
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+  <!-- jQuery CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <!-- DateTimePicker -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- NiceSelect -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- Custom CSS & JS -->
+  <link rel="stylesheet" href="./_css/reset.css">
+  <link rel="stylesheet" href="./_css/variables.css">
+  <link rel="stylesheet" href="./_css/element.css">
+  <link rel="stylesheet" href="./_css/layout.css">
+  <link rel="stylesheet" href="./_css/common.css">
+  <link rel="stylesheet" href="./_css/style.css">
+  <link rel="stylesheet" href="./_css/main.css">
+  <link rel="stylesheet" href="./_css/account.css">
+  <link rel="stylesheet" href="./_css/attribute.css">
+  <script src="./_js/common.js" defer></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <header class="header">
+      <div class="header_top">
+        <div class="header__inner">
+          <a href="./index.html" class="logo">
+            <img src="./_img/common/logo.png" alt="로고" height="40">
+          </a>
+          <div class="header_account">
+            <form class="form_header_login">
+              <fieldset>
+                <div class="header_login">
+                  <div class="login_input">
+                    <label for="">아이디</label>
+                    <input type="text">
+                  </div>
+                  <div class="login_input">
+                    <label for="">비밀번호</label>
+                    <input type="password">
+                  </div>
+                  <button type="submit" class="btn btn-sm btn_p16 btn_login">로그인</button>
+                </div>
+              </fieldset>
+            </form>
+            <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">아이디/비밀번호 찾기</a>
+            <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">회원가입</a>
+          </div>
+          <button type="button" class="btn_mo_menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="header__inner">
+          
+          <nav class="gnb">
+            <ul class="gnb_ul">
+              <li class="gnb_li">
+                <a href="#">시험정보</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">자격소개</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">시험안내</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">응시안내</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">관련규정</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">시험장 현황</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">샘플문제</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">보수교육 안내</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb_li">
+                <a href="#">원서접수</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">원서접수</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">원서접수 확인 및 취소</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">수험표 출력</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb_li">
+                <a href="#">마이페이지</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">원서접수내역</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">시험결과확인</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">1:1 문의</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">환불신청</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">개인정보 관리</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb_li">
+                <a href="#">자격증 신청</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">자격증 발급신청</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">자격증 유효기간 연장</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb_li">
+                <a href="#">고객센터</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">공지사항</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">자주 하는 질문</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">자료실</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- 모바일 헤더 햄버거 버튼 눌렀을 때 나오는 사이드바 -->
+    <div class="mobile_sidebar">
+      <div class="m_sidebar__inner">
+        <!-- 로그인 전 -->
+        <form action="" class="form_m_account">
+          <fieldset>
+            <div class="m_sidebar_login">
+              <div class="login_input">
+                <label for="">아이디</label>
+                <input type="text">
+              </div>
+              <div class="login_input">
+                <label for="">비밀번호</label>
+                <input type="password">
+              </div>
+              <div class="login_btns">
+                <button type="submit" class="btn btn-sm btn_p16 btn_gradient btn_login">로그인</button>
+                <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">아이디/비밀번호 찾기</a>
+                <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">회원가입</a>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        <!-- 로그인 후 -->
+        <!-- <div class="m_sidebar_account">
+          <h3>안녕하세요 00님!</h3>
+          <div class="account_btns">
+            <a href="#" class="btn btn-sm btn_gradient">마이페이지</a>
+            <a href="#" class="btn btn-sm btn_outline_brand">로그아웃</a>
+          </div>
+        </div> -->
+        <nav class="m_sidebar">
+          <ul class="sidebar_ul">
+            <li>
+              <a href="#">시험정보</a>
+              <ul class="sidebar_2depth">
+                <li><a href="#">자격소개</a></li>
+                <li><a href="#">시험안내</a></li>
+                <li><a href="#">응시안내</a></li>
+                <li><a href="#">관련규정</a></li>
+                <li><a href="#">시험장 현황</a></li>
+                <li><a href="#">샘플문제</a></li>
+                <li><a href="#">보수교육 안내</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">원서접수</a>
+              <ul class="sidebar_2depth">
+                <li><a href="#">원서접수</a></li>
+                <li><a href="#">원서접수 확인 및 취소</a></li>
+                <li><a href="#">수험표 출력</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">마이페이지</a>
+              <ul class="sidebar_2depth">
+                <li><a href="#">원서접수내역</a></li>
+                <li><a href="#">시험결과확인</a></li>
+                <li><a href="#">1:1 문의</a></li>
+                <li><a href="#">환불신청</a></li>
+                <li><a href="#">개인정보 관리</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">자격증 신청</a>
+              <ul class="sidebar_2depth">
+                <li><a href="#">자격증 발급신청</a></li>
+                <li><a href="#">자격증 유효기간 연장</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">고객센터</a>
+              <ul class="sidebar_2depth">
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">자주 하는 질문</a></li>
+                <li><a href="#">자료실</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <main class="main">
+      <div class="home__inner">
+        <section class="home_sec1">
+          <div class="sec1__inner">
+            <div class="swiper home_banner_swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="home_banner"
+                    style="background: url(./_img/main/home_banner_01.png) no-repeat center center / contain;">
+                    <h1>PLC 제어기술자 <span>자격 설명회 개최</span></h1>
+                    <a href="#" class="btn_show">자세히 보기</a>
+                    <ul class="home_banner_info">
+                      <li><span>·일시</span>2024년 6월 27일 목요일&nbsp;&nbsp;14 : 00 - 15 : 00</li>
+                      <li><span>·장소</span>LS본사 용산타워 2층, 미르홀</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="home_banner"
+                    style="background: url(./_img/main/home_banner_03.png) no-repeat center center / contain;">
+                    <h1>PLC 제어기술자 <span>자격 설명회 개최</span></h1>
+                    <a href="#" class="btn_show">자세히 보기</a>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="home_banner"
+                    style="background: url(./_img/main/home_banner_02.png) no-repeat center center / contain;">
+                    <h1>PLC 제어기술자 <span>자격 설명회 개최</span></h1>
+                    <a href="#" class="btn_show">자세히 보기</a>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+              <div class="swiper_pagination">
+                <div class="swiper-pagination left"></div>
+                <div class="swiper-pagination right"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home_sec2">
+          <div class="sec2__inner">
+            <div class="home_notice">
+              <div class="home_header">
+                <div class="title">
+                  <h3><span class="dot_active">공지사항</span></h3>
+                  <p>PCQ의 새로운 소식들을 둘러보세요.</p>
+                </div>
+                <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">더보기</a>
+              </div>
+              <div class="board_content">
+                <div class="notice_list">
+                  <div class="notice_item">
+                    <a href="#" class="title">[이벤트 중] 2024년 1회 전기·공사/소방(산업)기사 실기 합격후기 이벤트! (1등 백화점 상품권)</a>
+                    <span class="date">2024.06.20</span>
+                  </div>
+                  <div class="notice_item">
+                    <a href="#" class="title">[이벤트 중] 2024년 3회 전기/승강기/조경 기능사 필기 합격후기 이벤트!(1등 백화점 상품권)</a>
+                    <span class="date">2024.06.20</span>
+                  </div>
+                  <div class="notice_item">
+                    <a href="#" class="title">다산에듀 전문서적 신간 설비보전기사 실기(공유압제어) 출시 안내</a>
+                    <span class="date">2024.06.20</span>
+                  </div>
+                  <div class="notice_item">
+                    <a href="#" class="title">[다산에듀 X LS일렉트릭] PLC 제어기술자 자격설명회 참석 안내</a>
+                    <span class="date">2024.06.20</span>
+                  </div>
+                  <div class="notice_item">
+                    <a href="#" class="title">[이벤트 중] 2024년 2회 전기/승강기/조경 기능사 실기 합격후기 이벤트! (1등 백화점 상품권)</a>
+                    <span class="date">2024.06.20</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="home_navigation">
+              <div class="navi_top_box">
+                <a href="#" class="navi">
+                  <span>원서접수 <br> 하러가기</span>
+                  <img src="./_img/main/home_navigation_arrow_01.svg" alt="">
+                </a>
+                <a href="#" class="navi">
+                  <span>시험결과<br>확인하러가기</span>
+                  <img src="./_img/main/home_navigation_arrow_02.svg" alt="">
+                </a>
+              </div>
+              <a href="#" class="navi_w100p">
+                <div class="title">
+                  <img src="./_img/main/home_navigation_03_img.png" alt="">
+                  <span>자격증발급 신청하러가기</span>
+                </div>
+                <img src="./_img/main/home_navigation_arrow_03.svg" alt="">
+              </a>
+              <a href="#" class="navi_w100p">
+                <div class="title">
+                  <img src="./_img/main/home_navigation_04_img.png" alt="">
+                  <span>1 : 1 문의 하러가기</span>
+                </div>
+                <img src="./_img/main/home_navigation_arrow_04.svg" alt="">
+              </a>
+              <a href="#" class="navi_w100p">
+                <div class="title">
+                  <img src="./_img/main/home_navigation_05_img.png" alt="">
+                  <span>진위여부 확인하기</span>
+                </div>
+                <img src="./_img/main/home_navigation_arrow_05.svg" alt="">
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="home_sec3">
+          <div class="sec3__inner">
+            <div class="home_header">
+              <div class="title">
+                <h3><span class="dot_active">FAQ</span></h3>
+                <p>자격증과 관련된<br>자주하는 질문들을 모아보았어요!</p>
+              </div>
+            </div>
+            <div class="faq_type_menu">
+              <a href="#" class="faq_type">
+                <span>회원가입 & 로그인</span>
+              </a>
+              <a href="#" class="faq_type">
+                <span>원서접수 및 결제</span>
+              </a>
+              <a href="#" class="faq_type">
+                <span>사진등록</span>
+              </a>
+              <a href="#" class="faq_type">
+                <span>응시 취소 및 변경</span>
+              </a>
+              <a href="#" class="faq_type">
+                <span>환불</span>
+              </a>
+              <a href="#" class="faq_type">
+                <span>수험표 출력</span>
+              </a>
+              <a href="#" class="faq_type">
+                <span>자격증 출력</span>
+              </a>
+              <a href="#" class="faq_type">
+                <span>자격 기간 연장</span>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="home_sec4">
+          <div class="sec4__inner">
+            <a href="#" class="sec4_banner">
+              <h3 class="title">
+                이제 PCL 제어기술자 자격증은 <span>PCQ에서 신청하세요!</span>
+              </h3>
+              <img src="./_img/main/home_section4_img.png" alt="" height="140">
+            </a>
+          </div>
+        </section>
+        <section class="home_sec5">
+          <div class="sec5__inner">
+            <div class="home_reference">
+              <div class="home_header">
+                <div class="title">
+                  <h3><span class="dot_active">자료실</span></h3>
+                  <p>여러분들을 위해<br>PLC 제어기술자 자격증 관련 자료들을 모아놓았어요!</p>
+                </div>
+                <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">더보기</a>
+              </div>
+              <div class="reference_content">
+                <div class="reference_list">
+                  <div class="reference_item">
+                    <a href="#" class="title notice">[이벤트 중] 2024년 1회 전기·공사/소방(산업)기사 실기 합격후기 이벤트! (1등 백화점 상품권)</a>
+                    <span class="date">2024.06.20</span>
+                  </div>
+                  <div class="reference_item">
+                    <a href="#" class="title">[이벤트 중] 2024년 3회 전기/승강기/조경 기능사 필기 합격후기 이벤트!(1등 백화점 상품권)</a>
+                    <span class="date">2024.06.20</span>
+                  </div>
+                  <div class="reference_item">
+                    <a href="#" class="title">다산에듀 전문서적 신간 설비보전기사 실기(공유압제어) 출시 안내</a>
+                    <span class="date">2024.06.20</span>
+                  </div>
+                  <div class="reference_item">
+                    <a href="#" class="title">[다산에듀 X LS일렉트릭] PLC 제어기술자 자격설명회 참석 안내</a>
+                    <span class="date">2024.06.20</span>
+                  </div>
+                  <div class="reference_item">
+                    <a href="#" class="title">[이벤트 중] 2024년 2회 전기/승강기/조경 기능사 실기 합격후기 이벤트! (1등 백화점 상품권)</a>
+                    <span class="date">2024.06.20</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="home_sec6">
+          <div class="sec6__inner">
+            <div class="home_header">
+              <div class="title">
+                <h3><span class="dot_active">시험장 현황</span></h3>
+              </div>
+              <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">더보기</a>
+            </div>
+            <div class="home_test_center">
+              <div class="test_area_list">
+                <button type="button" class="test_area active">서울</button>
+                <button type="button" class="test_area">경기</button>
+                <button type="button" class="test_area">대전</button>
+                <button type="button" class="test_area">대구</button>
+                <button type="button" class="test_area">부산</button>
+                <button type="button" class="test_area">충북</button>
+                <button type="button" class="test_area">충남</button>
+              </div>
+              <div class="test_map_wrap">
+                <div class="test_map"></div>
+                <div class="test_result_list scroll_fixed_y">
+                  <div class="test-center_item active">
+                    <div class="test-center__inner">
+                      <h3 class="test_name">다산에듀 한티점</h3>
+                      <div class="test_info">
+                        <p class="loc">서울특별시 강남구 강남대로 123 - 2길 12 강남빌딩 5층</p>
+                        <p class="tel">02-000-0000</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="test-center_item">
+                    <div class="test-center__inner">
+                      <h3 class="test_name">다산에듀 한티점</h3>
+                      <div class="test_info">
+                        <p class="loc">서울특별시 강남구 강남대로 123 - 2길 12 강남빌딩 5층</p>
+                        <p class="tel">02-000-0000</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="test-center_item">
+                    <div class="test-center__inner">
+                      <h3 class="test_name">다산에듀 한티점</h3>
+                      <div class="test_info">
+                        <p class="loc">서울특별시 강남구 강남대로 123 - 2길 12 강남빌딩 5층</p>
+                        <p class="tel">02-000-0000</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="test-center_item">
+                    <div class="test-center__inner">
+                      <h3 class="test_name">다산에듀 한티점</h3>
+                      <div class="test_info">
+                        <p class="loc">서울특별시 강남구 강남대로 123 - 2길 12 강남빌딩 5층</p>
+                        <p class="tel">02-000-0000</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer_top">
+          <div class="footer_logo">
+            <img src="./_img/common/logo_white.png" alt="푸터 로고" height="40">
+          </div>
+          <ul class="footer_menu">
+            <li class="footer-link"><a href="#">회사소개</a></li>
+            <li class="footer-link"><a href="#">오시는 길</a></li>
+            <li class="footer-link"><a href="#" class="fw600">개인정보처리방침</a></li>
+            <li class="footer-link"><a href="#">이용약관</a></li>
+          </ul>
+        </div>
+        <div class="footer_bottom">
+          <div class="footer_company_info">
+            <div class="company_info">
+              <ul class="company_info_ul bdr">
+                <li class="company_info_li"><span>회사명</span>00회사</li>
+                <li class="company_info_li"><span>대표명</span>김대표</li>
+                <li class="company_info_li"><span>사업자등록번호</span>000-00-00000</li>
+                <li class="company_info_li"><span>통신판매업</span>제0000-0000-0000호</li>
+              </ul>
+              <ul class="company_info_ul">
+                <li class="company_info_li"><span>주소</span>서울시 00구 00로 00층 [00000]</li>
+              </ul>
+              <ul class="company_info_ul">
+                <li class="company_info_li"><span>TEL</span>000-000-0000</li>
+                <li class="company_info_li"><span>E-mail</span>pcq@gmail.com</li>
+                <li class="company_info_li"><span>FAX</span>000-0000-0000</li>
+              </ul>
+            </div>
+          </div>
+          <div class="footer_family_site">
+            <select name="" id="" class="nice-select select--typeA sm">
+              <option value="">관련사이트</option>
+              <option value="">다산에듀</option>
+              <option value="">PCQ</option>
+            </select>
+          </div>
+        </div>
+        <p class="copyright">copyright &copy; pcq. ALL Rights Reserved.</p>
+      </div>
+    </footer> 
+    <div class="scroll_top"></div>
+  </div>
+  <script>
+    $(function() {
+      var homeSwiper = new Swiper(".home_banner_swiper", {
+        slidesPerView: 1,
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 3,
+        spaceBetween: 20,
+        mousewheel: false,
+        watchSlidesVisibility: true,
+        pagination: {
+          el: ".swiper-pagination.left",
+          type: "fraction",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      var pagingSwiper = new Swiper(".home_banner_swiper", {
+        slidesPerView: 1,
+        centeredSlides: true,
+        loop: true,
+        loopedSlides: 3,
+        spaceBetween: 20,
+        mousewheel: false,
+        watchSlidesVisibility: true,
+        pagination: {
+          el: '.swiper-pagination.right',
+          clickable: false,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+
+      homeSwiper.controller.control = pagingSwiper;
+    })
+    
+  </script>
+</body>
+</html>

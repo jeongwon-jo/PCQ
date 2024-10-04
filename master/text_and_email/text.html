@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="en" data-topbar="light" data-sidebar="dark" data-sidebar-size="lg" data-sidebar-image="none"
+  data-preloader="disable" data-theme="default" data-theme-colors="default">
+
+<head>
+
+  <meta charset="utf-8" />
+  <title>PCQ | 관리자</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="Premium Multipurpose Admin & Dashboard Template" name="description" />
+  <meta content="Themesbrand" name="author" />
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+  <!-- Favicon -->
+  <link rel="icon" href="../../_img/common/favicon.ico">
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PCQ" />
+  <meta property="og:description" content="PCQ" />
+  <meta property="og:image" content="../../_img/common/opengraph.png" />
+  <!-- jQuery CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <!-- jsvectormap css -->
+  <link href="assets/libs/jsvectormap/css/jsvectormap.min.css" rel="stylesheet" type="text/css" />
+  <!--Swiper slider css-->
+  <link href="assets/libs/swiper/swiper-bundle.min.css" rel="stylesheet" type="text/css" />
+  <!-- Layout config Js -->
+  <script src="assets/js/layout.js"></script>
+  <link rel="stylesheet" href="../_css/reset.css">
+  <link rel="stylesheet" href="../../_css/attribute.css">
+  <!-- Bootstrap Css -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+  <!-- Icons Css -->
+  <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+  <!-- App Css-->
+  <link href="../assets/css/app.min.css" rel="stylesheet" type="text/css" />
+  <!-- custom Css-->
+  <link href="../assets/css/custom.min.css" rel="stylesheet" type="text/css" />
+  <!-- admin.css -->
+  <link href="../_css/admin.css" rel="stylesheet" type="text/css" />
+  <script src="../_js/common.js" defer></script>
+</head>
+
+<body>
+
+  <!-- Begin page -->
+  <div id="layout-wrapper">
+
+
+    <!-- 왼쪽 메뉴 영역 -->
+    <div class="app-menu navbar-menu">
+      <!-- LOGO -->
+      <div class="navbar-brand-box">
+        <!-- Dark Logo-->
+        <a href="index.html" class="logo logo-dark">
+          <span class="logo-sm">
+            <img src="../_img/common/logo-sm.png" alt="" height="22">
+          </span>
+          <span class="logo-lg">
+            <img src="../_img/common/logo_white.png" alt="" height="34">
+          </span>
+        </a>
+
+        <a href="index.html" class="logo logo-light">
+          <span class="logo-sm">
+            <img src="../_img/common/logo-sm.png" alt="" height="22">
+          </span>
+          <span class="logo-lg">
+            <img src="../_img/common/logo_white.png" alt="" height="34">
+          </span>
+        </a>
+        <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"
+          id="vertical-hover">
+          <i class="ri-record-circle-line"></i>
+        </button>
+      </div>
+
+      <div id="scrollbar">
+        <div class="container-fluid">
+          <div id="two-column-menu">
+          </div>
+          <div class="favorite_menus">
+            <button type="button" class="btn_favorite">
+              <i class="ri-star-fill"></i> 즐겨찾기
+            </button>
+            <ul class="favorite_list">
+              <li>
+                <button type="button" class="btn_mark active"></button>
+                <a href="#">감독관 정보관리</a>
+              </li>
+              <li>
+                <button type="button" class="btn_mark active"></button>
+                <a href="#">연계(협약)기관관리</a>
+              </li>
+              <li>
+                <button type="button" class="btn_mark active"></button>
+                <a href="#">사용자관리</a>
+              </li>
+              <li>
+                <button type="button" class="btn_mark active"></button>
+                <a href="#">검정마스터등록</a>
+              </li>
+            </ul>
+          </div>
+          <ul class="navbar-nav" id="navbar-nav">
+            <li class="menu-title"><span data-key="t-menu">Menu</span></li>
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu1" data-bs-toggle="collapse" role="button" aria-expanded="true"
+                aria-controls="sidebarMenu1">
+                <span data-key="t-dashboards">기준정보</span>
+              </a>
+              <div class="collapse menu-dropdown show" id="sidebarMenu1">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link active"> 사용자관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 코드관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 수입 기준관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 지출 기준관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 가상계좌번호 관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 자격증 문구관리</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">연계(협약)기관관리</a>
+                  </li>
+                  <li class="nav-item">
+                    <a hhref="#" class="nav-link">사용자변 권한관리</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu2" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu2">
+                <span data-key="t-apps">인력관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu2">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 감독관 정보관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 운영자 정보관리 </a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link"> 시설관리자 정보관리 </a>
+                  </li>
+                </ul>
+              </div>
+          
+            </li>
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu3" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu3">
+                <span data-key="t-apps">시설관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu3">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">시험장 정보관리</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu4" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu4">
+                <span data-key="t-apps">검정과정관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu4">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">검정마스터등록</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu5" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu5">
+                <span data-key="t-apps">검정운영관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu5">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#sidebarMenu5_1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                      aria-controls="sidebarMenu5_1">
+                      검정차수(기수)관리
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarMenu5_1">
+                      <ul class="nav nav-sm flex-column">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link"> 기본정보 </a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link"> 차수별 지출내역
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#sidebarMenu5_2" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                      aria-controls="sidebarMenu5_2">
+                      차수(기수)별 평가자 관리
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarMenu5_2">
+                      <ul class="nav nav-sm flex-column">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link"> 검정신청자관리 </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu6" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu6">
+                <span data-key="t-apps">검정결과관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu6">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#sidebarMenu6_1" class="nav-link" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                      aria-controls="sidebarMenu6_1">
+                      차수(기수)별 결과관리
+                    </a>
+                    <div class="collapse menu-dropdown" id="sidebarMenu6_1">
+                      <ul class="nav nav-sm flex-column">
+                        <li class="nav-item">
+                          <a href="#" class="nav-link"> 검정결과처리 </a>
+                        </li>
+                        <li class="nav-item">
+                          <a href="#" class="nav-link"> 합격처리 </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu7" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu7">
+                <span data-key="t-apps">지출관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu7">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">재료비 지출내역</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">인건비 지출내역</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">시설사용료 지출내역</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">기타 제반비용 지출내역</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">지출내역 종합관리</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu8" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu8">
+                <span data-key="t-apps">회원정보관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu8">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">회원정보관리</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu9" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu9">
+                <span data-key="t-apps">보수교육 관리</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu9">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">보수교육과정 등록</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">보수교육 운영</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">보수교육 운영 결과</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          
+            <li class="nav-item">
+              <a class="nav-link menu-link" href="#sidebarMenu10" data-bs-toggle="collapse" role="button" aria-expanded="false"
+                aria-controls="sidebarMenu10">
+                <span data-key="t-apps">문자 및 이메일 발송</span>
+              </a>
+              <div class="collapse menu-dropdown" id="sidebarMenu10">
+                <ul class="nav nav-sm flex-column">
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">문자 발송</a>
+                  </li>
+                  <li class="nav-item">
+                    <a href="#" class="nav-link">이메일 발송</a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <!-- Sidebar -->
+      </div>
+      <div class="sidebar-background"></div>
+    </div>
+    <div class="vertical-overlay"></div>
+    <!-- 오른쪽 컨텐츠 영역 -->
+    <div class="main-content">
+      <div class="page-content">
+        <div class="container-fluid">
+          <div class="row">
+            <div id="page-topbar">
+              <div class="layout-width">
+                <div class="navbar-header">
+                  <!-- tab -->
+                  <div class="d-flex header_tabs">
+                    <ul class="header_tabs_ul" role="tablist">
+                      <li class="nav-item active">
+                        <a class="nav-link" data-bs-toggle="tab" href="#" role="tab">
+                          문자발송
+                        </a>
+                        <button type="button">
+                          <i class="ri-close-line"></i>
+                        </button>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#" role="tab">
+                          코드관리
+                          <button type="button">
+                            <i class="ri-close-line"></i>
+                          </button>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link" data-bs-toggle="tab" href="#" role="tab">
+                          수입 기준관리
+                          <button type="button">
+                            <i class="ri-close-line"></i>
+                          </button>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="d-flex align-items-center">
+                    <div class="dropdown ms-sm-3 header-item topbar-user">
+                      <button type="button" class="btn material-shadow-none" id="page-header-user-dropdown"
+                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <span class="d-flex align-items-center">
+                          <img class="rounded-circle header-profile-user" src="../_img/common/logo-sm.png"
+                            style="object-fit: none;" alt="Header Avatar">
+                          <span class="text-start ms-xl-2">
+                            <span class="d-none d-xl-inline-block ms-1 fw-medium user-name-text">홍길동</span>
+                            <span class="d-none d-xl-block ms-1 fs-12 user-name-sub-text">관리자</span>
+                          </span>
+                        </span>
+                      </button>
+                      <div class="dropdown-menu dropdown-menu-end">
+                        <!-- item-->
+                        <h6 class="dropdown-header">Welcome 관리자!</h6>
+                        <a class="dropdown-item" href="pages-profile.html"><i
+                            class="mdi mdi-account-circle text-muted fs-16 align-middle me-1"></i> <span
+                            class="align-middle">Profile</span></a>
+                        <a class="dropdown-item" href="pages-profile-settings.html"><i
+                            class="mdi mdi-cog-outline text-muted fs-16 align-middle me-1"></i> <span
+                            class="align-middle">Settings</span></a>
+                        <a class="dropdown-item" href="auth-logout-basic.html"><i
+                            class="mdi mdi-logout text-muted fs-16 align-middle me-1"></i> <span class="align-middle"
+                            data-key="t-logout">Logout</span></a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="contents active">
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-header align-items-center d-flex gap-2">
+                      <button type="button" class="btn_mark"></button>
+                      <h4 class="card-title mb-0 flex-grow-1">문자 발송</h4>
+                    </div><!-- end card header -->
+                    <div class="card-body">
+                      <ul class="nav nav-tabs mb-3" role="tablist">
+                        <li class="nav-item">
+                          <a class="nav-link active" data-bs-toggle="tab" href="#tab1" role="tab" aria-selected="false">
+                            문자 발송
+                          </a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link " data-bs-toggle="tab" href="#tab2" role="tab" aria-selected="false">
+                            문자 발송관리
+                          </a>
+                        </li>
+                      </ul>
+                      <div class="tab-content  text-muted">
+                        <!-- 문자 발송 -->
+                        <div class="tab-pane active" id="tab1" role="tabpanel">
+                          <div class="d-flex gap-3">
+                            <div class="flex-grow-1">
+                              <table class="table align-middle table-nowrap mb-0 table_detail">
+                                <colgroup>
+                                  <col style="width: 120px">
+                                  <col style="width: auto">
+                                </colgroup>
+                                <tbody>
+                                  <tr>
+                                    <th>문자메세지 제목</th>
+                                    <td>
+                                      <input type="text" class="form-control" value="" disabled>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th>문자메세지 내용</th>
+                                    <td>
+                                      <textarea class="form-control" id="" rows="10"></textarea>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th>예약메세지 여부</th>
+                                    <td>
+                                      <div class="d-flex gap-3 align-items-center">
+                                        <div class="form-check">
+                                          <label class="form-check-label" for="yes">
+                                            예
+                                          </label>
+                                          <input class="form-check-input" type="radio" name="radio_message" id="yes" checked>
+                                        </div>
+                                        <div class="form-check">
+                                          <label class="form-check-label" for="no">
+                                            아니오
+                                          </label>
+                                          <input class="form-check-input" type="radio" name="radio_message" id="no">
+                                        </div>
+                                      </div>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th>예약날짜</th>
+                                    <td>
+                                      <input type="date" class="form-control form-date" style="max-width: 340px;">
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th>예약시간</th>
+                                    <td>
+                                      <input type="time" class="form-control form-date" style="max-width: 340px;">
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                            <div class="flex-grow-1">
+                              <table class="table align-middle table-nowrap mb-0 table_detail">
+                                <colgroup>
+                                  <col style="width: 120px">
+                                  <col style="width: auto">
+                                </colgroup>
+                                <tbody>
+                                  <tr>
+                                    <th>메세지 발송처</th>
+                                    <td>
+                                      <textarea class="form-control" id="" rows="15"></textarea>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <th>발신번호</th>
+                                    <td>
+                                      <input type="text" class="form-control" value="">
+                                    </td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                          <div class="d-flex justify-content-end">
+                            <button type="button" class="btn btn-md w-md btn_new">메세지 발송</button>
+                          </div>
+                        </div>
+                        <!-- 문자 발송관리 -->
+                        <div class="tab-pane" id="tab2" role="tabpanel">
+                          <form action="javascript:void(0);" class="form_search">
+                            <div class="row gy-2 gx-3 mb-3 align-items-center">
+                              <h4 class="form_title">기간</h4>
+                              <div class="date_input_box col-auto">
+                                <div class="date_select">
+                                  <input type="date" class="form-control form-date" id="date_start" value="">
+                                  <span>~</span>
+                                  <input type="date" class="form-control form-date" id="date_end">
+                                </div>
+                              </div>
+                              <h4 class="form_title">메세지 유형</h4>
+                              <div class="select_input_box w-auto col-auto">
+                                <div class="col-auto">
+                                  <select class="form-select">
+                                    <option value="">유형</option>
+                                  </select>
+                                </div>
+                              </div>
+                              <h4 class="form_title">발송 유형</h4>
+                              <div class="select_input_box w-auto col-auto">
+                                <div class="col-auto">
+                                  <select class="form-select">
+                                    <option value="">유형</option>
+                                  </select>
+                                </div>
+                                <button type="button" class="btn w-sm btn_detail"><span>조회</span></button>
+                              </div>
+                            </div>
+                            <!--end row-->
+                          </form>
+                          <div class="d-flex gap-3">
+                            <div style="flex: 2;">
+                              <div class="list_info mt-3">
+                                <div>
+                                  <h5>문자발송내역</h5>
+                                  <span class="fs-6">총 <b>10</b>건</span>
+                                </div>
+                                <div class="list_sort_btns">
+                                  <div class="d-flex align-items-center gap-2">
+                                    <button class="btn w-md btn-md btn_delete">예약취소</button>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div style="flex: 1;">
+                            </div>
+                          </div>
+                          
+                          <div class="d-flex gap-3 mt-3">
+                            <div style="flex: 2;">
+                              <div class="table-scrollY">
+                                <div class="table-responsive table-scrolY__wrap table-card m-0">
+                                  <table class="table align-middle table-nowrap table-striped-columns mb-0 table_list">
+                                    <colgroup>
+                                      <col style="width: 40px;">
+                                      <col style="width: 80px;">
+                                      <col style="width: 80px;">
+                                      <col style="width: auto;">
+                                    </colgroup>
+                                    <thead class="table-light">
+                                      <tr>
+                                        <th scope="col">
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="cardtableCheck">
+                                            <label class="form-check-label" for="cardtableCheck"></label>
+                                          </div>
+                                        </th>
+                                        <th scope="col">No</th>
+                                        <th scope="col">접수시간</th>
+                                        <th scope="col">발신번호</th>
+                                        <th scope="col">문자유형</th>
+                                        <th scope="col">발송유형</th>
+                                        <th scope="col">총발송</th>
+                                        <th scope="col">실패</th>
+                                        <th scope="col">성공</th>
+                                        <th scope="col">대기</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                            <label class="form-check-label" for="chk1_1"></label>
+                                          </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                            <label class="form-check-label" for="chk1_1"></label>
+                                          </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                            <label class="form-check-label" for="chk1_1"></label>
+                                          </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>
+                                          <div class="form-check">
+                                            <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                            <label class="form-check-label" for="chk1_1"></label>
+                                          </div>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>
+
+                              
+                            </div>
+                            <div style="flex: 1; align-self: stretch;">
+                              <div class="d-flex justify-content-between bg-light align-items-center p-2">
+                                <h5 class="mb-0">문자내용</h5>
+                                <button type="button" class="btn btn-md w-sm btn_save">재발송</button>
+                              </div>
+                              <div class="bg-light mt-2 p-2" style="height: calc(100% - 50px);">
+                                <div>
+                                  <p>1231231</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="list_info mt-3">
+                            <div>
+                              <h5>수신자목록</h5>
+                              <span class="fs-6">총 <b>10</b>건</span>
+                            </div>
+                            <div class="list_sort_btns">
+                              <div class="d-flex align-items-center gap-2">
+                                <button class="btn w-md btn-md btn_delete">예약취소</button>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="mt-3">
+                            <div class="table-scrollY">
+                              <div class="table-responsive table-scrolY__wrap table-card m-0">
+                                <table class="table align-middle table-nowrap table-striped-columns mb-0 table_list">
+                                  <colgroup>
+                                    <col style="width: 40px;">
+                                    <col style="width: 80px;">
+                                    <col style="width: auto;">
+                                  </colgroup>
+                                  <thead class="table-light">
+                                    <tr>
+                                      <th scope="col">
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="checkbox" value="" id="cardtableCheck">
+                                          <label class="form-check-label" for="cardtableCheck"></label>
+                                        </div>
+                                      </th>
+                                      <th scope="col">No</th>
+                                      <th scope="col">접수시각</th>
+                                      <th scope="col">발송시각</th>
+                                      <th scope="col">발신번호</th>
+                                      <th scope="col">수신번호</th>
+                                      <th scope="col">문자유형</th>
+                                      <th scope="col">발송유형</th>
+                                      <th scope="col">발송결과</th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr>
+                                      <td>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                          <label class="form-check-label" for="chk1_1"></label>
+                                        </div>
+                                      </td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                          <label class="form-check-label" for="chk1_1"></label>
+                                        </div>
+                                      </td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                          <label class="form-check-label" for="chk1_1"></label>
+                                        </div>
+                                      </td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                    </tr>
+                                    <tr>
+                                      <td>
+                                        <div class="form-check">
+                                          <input class="form-check-input" type="checkbox" value="" id="chk1_1">
+                                          <label class="form-check-label" for="chk1_1"></label>
+                                        </div>
+                                      </td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                      <td></td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> <!-- end col -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!--start back-to-top-->
+  <button onclick="topFunction()" class="btn btn-danger btn-icon" id="back-to-top">
+    <i class="ri-arrow-up-line"></i>
+  </button>
+  <!--end back-to-top-->
+
+  <!--preloader-->
+  <div id="preloader">
+    <div id="status">
+      <div class="spinner-border text-primary avatar-sm" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT -->
+  <script src="../assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/libs/node-waves/waves.min.js"></script>
+  <script src="../assets/libs/feather-icons/feather.min.js"></script>
+  <script src="../assets/js/pages/plugins/lord-icon-2.1.0.js"></script>
+  <script src="../assets/js/plugins.js"></script>
+  <!-- ckeditor -->
+  <script src="../assets/libs/@ckeditor/ckeditor5-build-classic/build/ckeditor.js"></script>
+
+  <!-- init js -->
+  <script src="../assets/js/pages/form-editor.init.js"></script>
+  <!-- App js -->
+  <script src="../assets/js/app.js"></script>
+</body>
+
+</html>

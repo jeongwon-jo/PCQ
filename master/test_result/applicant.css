@@ -1,0 +1,108 @@
+.container {
+  padding: 20px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.appli_inner {
+  height: 100%;
+  width: 860px;
+}
+
+h2.app_title {
+  text-align: center;
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.list_info {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.list_info {
+  border: 1px solid #999999;
+}
+
+.list_info table {
+  width: 100%;
+}
+
+.list_info table th {
+  font-weight: 600;
+  background-color: #FAFAFA;
+}
+
+.list_info table th,
+.list_info table td {
+  border: 1px solid #dddddd;
+  height: 56px;
+  font-size: 16px;
+  color: #505050;
+}
+
+.result_info {
+  margin-top: 40px;
+  border: 1px solid #999999;
+}
+
+.result_info table th {
+  font-weight: 600;
+  background-color: #FAFAFA;
+}
+
+.result_info table th,
+.result_info table td {
+  border: 1px solid #DDDDDD;
+  height: 56px;
+  font-size: 16px;
+}
+
+.result_info table tr:last-child th,
+.result_info table tr:last-child td {
+  border-bottom: none;
+}
+
+.result_info table:last-child tr:last-child th,
+.result_info table:last-child tr:last-child td {
+  border-bottom: 1px solid #929292;
+}
+
+
+@page {
+  size: A4;
+  margin: 20px;
+}
+
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  table {
+    page-break-inside: auto
+  }
+
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto
+  }
+
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
+
+  .appli_inner {
+    width: 100%;
+  }
+
+  .list_info,
+  .result_info {
+    border: none;
+  }
+}

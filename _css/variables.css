@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+:root {
+  /* color */
+  --brand_color: #2689BE;
+
+  /* Font Color */
+  --text_primary_color : #111111;
+
+  /* gradient */
+  --brand_gradient: linear-gradient(to right, #2689BE, #4C26BE);
+}

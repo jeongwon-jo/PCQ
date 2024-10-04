@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCQ</title>
+  <!-- Favicon -->
+  <link rel="icon" href="../_img/common/favicon.ico">
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PCQ" />
+  <meta property="og:description" content="PCQ" />
+  <meta property="og:image" content="../_img/common/opengraph.png" />
+  <!-- Font -->
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+  <!-- jQuery CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <!-- DateTimePicker -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- NiceSelect -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- Custom CSS & JS -->
+  <link rel="stylesheet" href="../_css/reset.css">
+  <link rel="stylesheet" href="../_css/variables.css">
+  <link rel="stylesheet" href="../_css/element.css">
+  <link rel="stylesheet" href="../_css/layout.css">
+  <link rel="stylesheet" href="../_css/common.css">
+  <link rel="stylesheet" href="../_css/style.css">
+  <link rel="stylesheet" href="../_css/main.css">
+  <link rel="stylesheet" href="../_css/account.css">
+  <link rel="stylesheet" href="../_css/attribute.css">
+  <script src="../_js/common.js" defer></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <header class="header">
+      <div class="header_top">
+        <div class="header__inner">
+          <a href="../index.html" class="logo">
+            <img src="../_img/common/logo.png" alt="로고" height="40">
+          </a>
+          <div class="header_account">
+            <form class="form_header_login">
+              <fieldset>
+                <div class="header_login">
+                  <div class="login_input">
+                    <label for="">아이디</label>
+                    <input type="text">
+                  </div>
+                  <div class="login_input">
+                    <label for="">비밀번호</label>
+                    <input type="password">
+                  </div>
+                  <button type="submit" class="btn btn-sm btn_p16 btn_login">로그인</button>
+                </div>
+              </fieldset>
+            </form>
+            <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">아이디/비밀번호 찾기</a>
+            <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">회원가입</a>
+          </div>
+          <button type="button" class="btn_mo_menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="header__inner">
+          <nav class="gnb">
+            <ul class="gnb_ul">
+              <li class="gnb_li">
+                <a href="#">시험정보</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">자격소개</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">시험안내</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">응시안내</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">관련규정</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">시험장 현황</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">샘플문제</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">보수교육 안내</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb_li">
+                <a href="#">원서접수</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">원서접수</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">원서접수 확인 및 취소</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">수험표 출력</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb_li">
+                <a href="#">마이페이지</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">원서접수내역</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">시험결과확인</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">1:1 문의</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">환불신청</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">개인정보 관리</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb_li">
+                <a href="#">자격증 신청</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">자격증 발급신청</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">자격증 유효기간 연장</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb_li">
+                <a href="#">고객센터</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">공지사항</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">자주 하는 질문</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">자료실</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- 모바일 헤더 햄버거 버튼 눌렀을 때 나오는 사이드바 -->
+    <div class="mobile_sidebar">
+      <div class="m_sidebar__inner">
+        <!-- 로그인 전 -->
+        <form action="" class="form_m_account">
+          <fieldset>
+            <div class="m_sidebar_login">
+              <div class="login_input">
+                <label for="">아이디</label>
+                <input type="text">
+              </div>
+              <div class="login_input">
+                <label for="">비밀번호</label>
+                <input type="password">
+              </div>
+              <div class="login_btns">
+                <button type="submit" class="btn btn-sm btn_p16 btn_gradient btn_login">로그인</button>
+                <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">아이디/비밀번호 찾기</a>
+                <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">회원가입</a>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        <!-- 로그인 후 -->
+        <!-- <div class="m_sidebar_account">
+              <h3>안녕하세요 00님!</h3>
+              <div class="account_btns">
+                <a href="#" class="btn btn-sm btn_gradient">마이페이지</a>
+                <a href="#" class="btn btn-sm btn_outline_brand">로그아웃</a>
+              </div>
+            </div> -->
+        <nav class="m_sidebar">
+          <ul class="sidebar_ul">
+            <li><a href="#">시험정보</a></li>
+            <li><a href="#">원서접수</a></li>
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="#">자격증 신청</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <main class="main">
+      <div class="container">
+        <!-- 좌측 Navbar -->
+        <nav class="left_navbar">
+          <div class="navbar_title">
+            <h3>시험정보</h3>
+          </div>
+          <ul class="lnb_ul">
+            <li class="lnb_li">
+              <a href="#">자격소개</a>
+            </li>
+            <li class="lnb_li">
+              <!-- 아래에 2Depth 메뉴들이 있으면 a태그에 btn_open 클래스 추가 -->
+              <a href="#" class="btn_open">시험안내</a>
+              <ul class="depth_2_ul">
+                <li class="depth_2_li">
+                  <a href="#">시험요강</a>
+                </li>
+                <li class="depth_2_li">
+                  <a href="#">시험일정</a>
+                </li>
+                <li class="depth_2_li">
+                  <a href="#">활용 및 우대사항</a>
+                </li>
+              </ul>
+            </li>
+            <li class="lnb_li">
+              <a href="#" class="btn_open">응시안내</a>
+              <ul class="depth_2_ul">
+                <li class="depth_2_li">
+                  <a href="#">기본정보</a>
+                </li>
+                <li class="depth_2_li">
+                  <a href="#">원서접수 안내</a>
+                </li>
+                <li class="depth_2_li">
+                  <a href="#">수험자 유의사항</a>
+                </li>
+                <li class="depth_2_li">
+                  <a href="#">과제수행 가이드</a>
+                </li>
+              </ul>
+            </li>
+            <li class="lnb_li">
+              <a href="#">관련규정</a>
+            </li>
+            <li class="lnb_li">
+              <a href="#">시험장 현황</a>
+            </li>
+            <li class="lnb_li active">
+              <a href="#">샘플문제</a>
+            </li>
+            <li class="lnb_li">
+              <a href="#">보수교육 안내</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- 우측 콘텐츠 -->
+        <div class="contents active">
+          <div class="page_title_area">
+            <ul class="breadcrumb">
+              <li class="home">HOME</li>
+              <li>시험정보</li>
+              <li class="active">샘플문제</li>
+            </ul>
+            <h1 class="page_title">샘플문제</h1>
+          </div>
+          <div class="board_content">
+            <div class="tbl_detail tbl_notice_detail">
+              <table>
+                <colgroup>
+                  <col style="width: 120px; min-width: 120px">
+                  <col style="width: auto">
+                </colgroup>
+                <tbody>
+                  <tr>
+                    <th>제목</th>
+                    <td>제목을 입력하세요</td>
+                  </tr>
+                  <tr>
+                    <th>등록자</th>
+                    <td>김등록</td>
+                  </tr>
+                  <tr>
+                    <th>등록일</th>
+                    <td>0000.00.00</td>
+                  </tr>
+                  <tr>
+                    <th>첨부파일</th>
+                    <td>
+                      <div class="file_list">
+                        <a href="#" class="file_link">
+                          <span class="file_name">공지사항.pdf</span>
+                          <img src="../_img/common/icon_file.svg" alt="">
+                        </a>
+                        <a href="#" class="file_link">
+                          <span class="file_name">공지사항.pdf</span>
+                          <img src="../_img/common/icon_file.svg" alt="">
+                        </a>
+                        <a href="#" class="file_link">
+                          <span class="file_name">공지사항.pdf</span>
+                          <img src="../_img/common/icon_file.svg" alt="">
+                        </a>
+                        <a href="#" class="file_link">
+                          <span class="file_name">공지사항.pdf</span>
+                          <img src="../_img/common/icon_file.svg" alt="">
+                        </a>
+                        <a href="#" class="file_link">
+                          <span class="file_name">공지사항.pdf</span>
+                          <img src="../_img/common/icon_file.svg" alt="">
+                        </a>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>내용</th>
+                    <td>
+                      <div class="cnts">
+                        임의로 텍스트를 입력했습니다. 참고해주세요. 기초공학 이론, 전자회로 및 시퀀스 제어 이론을 겸비하고, PLC 제어 및 시퀀스 작성을 통한 작업 수행능력의 검증과정을
+                        인증하는 자격증이다. 생산설비, 물류설비, 각종
+                        제어시스템에는 생산성 향상과 안전성, 인건비 절감 등 자동화 물결이 더욱 확대 적용되어 가고 있다. 이러한 현실에서 자동화 핵심기술인 PLC 운용능력을 보유하게 되면 개인의
+                        가치와 경쟁력은 분명히 높아질 것이다.
+                        임의로 텍스트를 입력했습니다. 참고해주세요. 기초공학 이론, 전자회로 및 시퀀스 제어 이론을 겸비하고, PLC 제어 및 시퀀스 작성을 통한 작업 수행능력의 검증과정을
+                        인증하는 자격증이다. 생산설비, 물류설비, 각종
+                        제어시스템에는 생산성 향상과 안전성, 인건비 절감 등 자동화 물결이 더욱 확대 적용되어 가고 있다. 이러한 현실에서 자동화 핵심기술인 PLC 운용능력을 보유하게 되면 개인의
+                        가치와 경쟁력은 분명히 높아질 것이다.
+                        <div class="img_list mt20">
+                          <img src="../_img/main/home_banner_01.png" alt="">
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="btn_area mt40">
+              <a href="#" class="btn btn-big btn_gradient btn_list">목록</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer_top">
+          <div class="footer_logo">
+            <img src="../_img/common/logo_white.png" alt="푸터 로고" height="40">
+          </div>
+          <ul class="footer_menu">
+            <li class="footer-link"><a href="#">회사소개</a></li>
+            <li class="footer-link"><a href="#">오시는 길</a></li>
+            <li class="footer-link"><a href="#" class="fw600">개인정보처리방침</a></li>
+            <li class="footer-link"><a href="#">이용약관</a></li>
+          </ul>
+        </div>
+        <div class="footer_bottom">
+          <div class="footer_company_info">
+            <div class="company_info">
+              <ul class="company_info_ul bdr">
+                <li class="company_info_li"><span>회사명</span>00회사</li>
+                <li class="company_info_li"><span>대표명</span>김대표</li>
+                <li class="company_info_li"><span>사업자등록번호</span>000-00-00000</li>
+                <li class="company_info_li"><span>통신판매업</span>제0000-0000-0000호</li>
+              </ul>
+              <ul class="company_info_ul">
+                <li class="company_info_li"><span>주소</span>서울시 00구 00로 00층 [00000]</li>
+              </ul>
+              <ul class="company_info_ul">
+                <li class="company_info_li"><span>TEL</span>000-000-0000</li>
+                <li class="company_info_li"><span>E-mail</span>pcq@gmail.com</li>
+                <li class="company_info_li"><span>FAX</span>000-0000-0000</li>
+              </ul>
+            </div>
+            <p class="copyright">copyright &copy; pcq. ALL Rights Reserved.</p>
+          </div>
+          <div class="footer_family_site">
+            <select name="" id="" class="nice-select select--typeA sm">
+              <option value="">관련사이트</option>
+              <option value="">다산에듀</option>
+              <option value="">PCQ</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="scroll_top"></div>
+  </div>
+</body>
+
+</html>

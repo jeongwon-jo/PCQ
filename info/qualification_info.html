@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PCQ</title>
+  <!-- Favicon -->
+  <link rel="icon" href="../_img/common/favicon.ico">
+  <!-- OpenGraph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="PCQ" />
+  <meta property="og:description" content="PCQ" />
+  <meta property="og:image" content="../_img/common/opengraph.png" />
+  <!-- Font -->
+  <link rel="stylesheet" as="style" crossorigin
+    href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css" />
+  <!-- jQuery CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <!-- DateTimePicker -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+  <!-- swiper -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+  <!-- NiceSelect -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+  <!-- Custom CSS & JS -->
+  <link rel="stylesheet" href="../_css/reset.css">
+  <link rel="stylesheet" href="../_css/variables.css">
+  <link rel="stylesheet" href="../_css/element.css">
+  <link rel="stylesheet" href="../_css/layout.css">
+  <link rel="stylesheet" href="../_css/common.css">
+  <link rel="stylesheet" href="../_css/style.css">
+  <link rel="stylesheet" href="../_css/main.css">
+  <link rel="stylesheet" href="../_css/account.css">
+  <link rel="stylesheet" href="../_css/attribute.css">
+  <script src="../_js/common.js" defer></script>
+</head>
+
+<body>
+  <div id="wrap">
+    <header class="header">
+      <div class="header_top">
+        <div class="header__inner">
+          <a href="../index.html" class="logo">
+            <img src="../_img/common/logo.png" alt="로고" height="40">
+          </a>
+          <div class="header_account">
+            <form class="form_header_login">
+              <fieldset>
+                <div class="header_login">
+                  <div class="login_input">
+                    <label for="">아이디</label>
+                    <input type="text">
+                  </div>
+                  <div class="login_input">
+                    <label for="">비밀번호</label>
+                    <input type="password">
+                  </div>
+                  <button type="submit" class="btn btn-sm btn_p16 btn_login">로그인</button>
+                </div>
+              </fieldset>
+            </form>
+            <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">아이디/비밀번호 찾기</a>
+            <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">회원가입</a>
+          </div>
+          <button type="button" class="btn_mo_menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+      <div class="header_bottom">
+        <div class="header__inner">
+          <nav class="gnb">
+            <ul class="gnb_ul">
+              <li class="gnb_li">
+                <a href="#">시험정보</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">자격소개</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">시험안내</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">응시안내</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">관련규정</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">시험장 현황</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">샘플문제</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">보수교육 안내</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb_li">
+                <a href="#">원서접수</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">원서접수</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">원서접수 확인 및 취소</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">수험표 출력</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb_li">
+                <a href="#">마이페이지</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">원서접수내역</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">시험결과확인</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">1:1 문의</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">환불신청</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">개인정보 관리</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb_li">
+                <a href="#">자격증 신청</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">자격증 발급신청</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">자격증 유효기간 연장</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="gnb_li">
+                <a href="#">고객센터</a>
+                <ul class="lnb_ul">
+                  <li class="lnb_li">
+                    <a href="#">공지사항</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">자주 하는 질문</a>
+                  </li>
+                  <li class="lnb_li">
+                    <a href="#">자료실</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- 모바일 헤더 햄버거 버튼 눌렀을 때 나오는 사이드바 -->
+    <div class="mobile_sidebar">
+      <div class="m_sidebar__inner">
+        <!-- 로그인 전 -->
+        <form action="" class="form_m_account">
+          <fieldset>
+            <div class="m_sidebar_login">
+              <div class="login_input">
+                <label for="">아이디</label>
+                <input type="text">
+              </div>
+              <div class="login_input">
+                <label for="">비밀번호</label>
+                <input type="password">
+              </div>
+              <div class="login_btns">
+                <button type="submit" class="btn btn-sm btn_p16 btn_gradient btn_login">로그인</button>
+                <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">아이디/비밀번호 찾기</a>
+                <a href="#" class="btn btn-sm btn_p16 btn_outline_brand">회원가입</a>
+              </div>
+            </div>
+          </fieldset>
+        </form>
+        <!-- 로그인 후 -->
+        <!-- <div class="m_sidebar_account">
+              <h3>안녕하세요 00님!</h3>
+              <div class="account_btns">
+                <a href="#" class="btn btn-sm btn_gradient">마이페이지</a>
+                <a href="#" class="btn btn-sm btn_outline_brand">로그아웃</a>
+              </div>
+            </div> -->
+        <nav class="m_sidebar">
+          <ul class="sidebar_ul">
+            <li><a href="#">시험정보</a></li>
+            <li><a href="#">원서접수</a></li>
+            <li><a href="#">마이페이지</a></li>
+            <li><a href="#">자격증 신청</a></li>
+            <li><a href="#">고객센터</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <main class="main">
+      <div class="container">
+        <!-- 좌측 Navbar -->
+        <nav class="left_navbar">
+          <div class="navbar_title">
+            <h3>시험정보</h3>
+          </div>
+          <ul class="lnb_ul">
+            <li class="lnb_li active">
+              <a href="#">자격소개</a>
+            </li>
+            <li class="lnb_li">
+              <!-- 아래에 2Depth 메뉴들이 있으면 a태그에 btn_open 클래스 추가 -->
+              <a href="#" class="btn_open">시험안내</a>
+              <ul class="depth_2_ul">
+                <li class="depth_2_li">
+                  <a href="#">시험요강</a>
+                </li>
+                <li class="depth_2_li">
+                  <a href="#">시험일정</a>
+                </li>
+                <li class="depth_2_li">
+                  <a href="#">활용 및 우대사항</a>
+                </li>
+              </ul>
+            </li>
+            <li class="lnb_li">
+              <a href="#" class="btn_open">응시안내</a>
+              <ul class="depth_2_ul">
+                <li class="depth_2_li">
+                  <a href="#">기본정보</a>
+                </li>
+                <li class="depth_2_li">
+                  <a href="#">원서접수 안내</a>
+                </li>
+                <li class="depth_2_li">
+                  <a href="#">수험자 유의사항</a>
+                </li>
+                <li class="depth_2_li">
+                  <a href="#">과제수행 가이드</a>
+                </li>
+              </ul>
+            </li>
+            <li class="lnb_li">
+              <a href="#">관련규정</a>
+            </li>
+            <li class="lnb_li">
+              <a href="#">시험장 현황</a>
+            </li>
+            <li class="lnb_li">
+              <a href="#">샘플문제</a>
+            </li>
+            <li class="lnb_li">
+              <a href="#">보수교육 안내</a>
+            </li>
+          </ul>
+        </nav>
+        <!-- 우측 콘텐츠 -->
+        <div class="contents active">
+          <div class="page_title_area">
+            <ul class="breadcrumb">
+              <li class="home">HOME</li>
+              <li>시험정보</li>
+              <li class="active">자격소개</li>
+            </ul>
+            <h1 class="page_title">자격소개</h1>
+          </div>
+          <div class="info_content">
+            <div class="sub_container">
+              <div class="sub_title">
+                <h5>PLC제어기술자(PLC Control Qualification) 자격을 소개합니다.</h5>
+              </div>
+              <div class="sub_content mt16">
+                <p class="c_info2">
+                  국내 최대 PLC제조기업인 LS일렉트릭과 국내 전기기술교육 시장점유율 1위 기업인 다산에듀가 함께 개발하고 운영하는 자격으로 산업계와 교육계의 공동 주도로 개발ㆍ운영되는 자격입니다.<br>
+                  LS일렉트릭은 50여년의 국내외 실제 사례들을 경험한 탁월한 현장능력을 바탕으로 최신 기술동향과 요구 사항을 반영하여 자격의 실효성을 높이는 역할을 맡고, 현장 경험과 기술적 노하우를 바탕으로 자격 시험의 기준과
+                  내용설계를 주도하며 다산에듀는 자격과정 운영에 핵심적인 역할을 맡아 기술교육과 관련한 전문 지식을 바탕으로, LS일렉트릭이 개발한 문제해결 과제를 체계적인 교육과정으로 개발하고 지원하며 교육기관과 기업체등 교육 수요자가 편리하게 과정을 도입할 수 있는 표준화된 교재, 온라인 강의, 실습 장비, 강의법 등을 지원하여 교육의 품질관리와 확산에 기여합니다.
+                </p>
+              </div>
+            </div>
+            <div class="sub_container">
+              <div class="sub_title">
+                <h5>자격의 정의</h5>
+              </div>
+              <div class="sub_content mt16">
+                <p class="c_info2">
+                  PLC제어 기술자는 PLC를 기반으로 산업현장에서 사용되는 자동화 공정에 맞게 프로그램을 작성하고 이를 활용하여 기기를 운용할 수 있는 능력을 갖추었는지를 평가하고 증명하는 자격을 말합니다.
+                </p>
+                <div class="qualification_info mt16">
+                  PLC(Programmable Logic Controller)는 공장 및 기계 자동화 핵심장치로 스마트팩토리의 브레인 역할을 수행합니다. 특히 산업 현장에서 발생하는 다양한 상황의 데이터를 효과적으로 수집하고
+                  처리하는 역할을 수행하는데, 데이터 기반의 미래기술(인공지능(AI), 사물인터넷(IoT), 빅데이터 분석, 디지털트윈 등)과 결합하여 공장의 효율성과 생산성을 극대화하는 데 그 중요성이 더욱 강조되고 있습니다.
+                </div>
+              </div>
+            </div>
+            <div class="sub_container">
+              <div class="sub_title">
+                <h5>자격 기본 정보</h5>
+              </div>
+              <div class="sub_content mt16">
+                <div class="tbl_list--typeB pc_show">
+                  <table>
+                    <colgroup>
+                      <col style="width: calc(100% / 6)">
+                      <col style="width: calc(100% / 6)">
+                      <col style="width: calc(100% / 6)">
+                      <col style="width: calc(100% / 6)">
+                      <col style="width: calc(100% / 6)">
+                      <col style="width: calc(100% / 6)">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>자격종목</th>
+                        <th>자격종류</th>
+                        <th>등록번호</th>
+                        <th>등급</th>
+                        <th>주무부처</th>
+                        <th>등록승인기관</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>PLC제어기술자</td>
+                        <td>등록민간자격</td>
+                        <td>2016-003575</td>
+                        <td>1급, 2급, 3급</td>
+                        <td>산업통상자원부</td>
+                        <td>한국직업능력연구원</td>
+                      </tr>
+                      <tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="tbl_list--typeB mo_show">
+                  <table>
+                    <colgroup>
+                      <col style="width: calc(100% / 3)">
+                      <col style="width: calc(100% / 3)">
+                      <col style="width: calc(100% / 3)">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>자격종목</th>
+                        <th>자격종류</th>
+                        <th>등록번호</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>PLC제어기술자</td>
+                        <td>등록민간자격</td>
+                        <td>2016-003575</td>
+                      </tr>
+                      <tr>
+                    </tbody>
+                  </table>
+                </div>
+                <div class="tbl_list--typeB mo_show mt10">
+                  <table>
+                    <colgroup>
+                      <col style="width: calc(100% / 3)">
+                      <col style="width: calc(100% / 3)">
+                      <col style="width: calc(100% / 3)">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>등급</th>
+                        <th>주무부처</th>
+                        <th>등록승인기관</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1급, 2급, 3급</td>
+                        <td>산업통상자원부</td>
+                        <td>한국직업능력연구원</td>
+                      </tr>
+                      <tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="sub_container">
+              <div class="sub_title">
+                <h5>등급별 직무기준</h5>
+              </div>
+              <div class="sub_content mt16">
+                <div class="tbl_list--typeB">
+                  <table>
+                    <colgroup>
+                      <col style="width: 180px">
+                      <col style="width: calc(100% - 180px)">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>구분(수준)</th>
+                        <th>등록승인기관</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1급<br>(세계 올림픽)</td>
+                        <td>최고 전문가 수준의 PLC제어 기술자로서 시스템 설계, 서보시스템 운영, 제어 시스템 통신망 구성 등의
+                        수행 능력을 갖춘 자.</td>
+                      </tr>
+                      <tr>
+                        <td>2급<br>(전국기능경기대회)</td>
+                        <td>고급 전문가 수준의 PLC제어 기술자로서 HMI프로그램 작성 및 시스템 시운전 및 분석, 다양한 모듈의 운영, 아날로그 입출력 제어, 프로그램 로직제어(PLC)분석 등의 수행 능력을 갖춘 자.</td>
+                      </tr>
+                      <tr>
+                        <td>3급<br>(지방기능경기대회)</td>
+                        <td>중급 전문가 수준의 PLC제어 기술자로서 시퀀스 논리회로 분석, 프로그램 로직제어(PLC)분석,
+                        입ㆍ출력장치 운영 및 인버터 구동 등 의 수행 능력을 갖춘 자.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="sub_container">
+              <div class="sub_title">
+                <h5>자격 유효기간</h5>
+              </div>
+              <div class="sub_content mt16">
+                <p class="c_info2">
+                  취득 후 3년간 자격이 유효하며 보수교육을 통해 유효기간 갱신<br>
+                  (취득후 3년 내 보수교육을 미이수 하더라도 자격이 소멸되지 않으며 보수교육 이수 즉시 3년간 자격의 효력 발생)
+                </p>
+              </div>
+            </div>
+            <div class="sub_container">
+              <div class="sub_title">
+                <h5>PLC제어기술자(PLC Control Qualification) 자격이 특별한 이유</h5>
+              </div>
+              <div class="sub_content mt16">
+                <div class="qualification_list mt16">
+                  <div class="qualification_item">
+                    <h5>-산업현장 즉시 적용 가능 자격</h5>
+                    <p>국내 PLC대표기업인 LS일렉트릭과 국내 전기기술교육 시장점유율 1위 기업인 다산에듀가 함께 개발하고 운영하는 자격으로 실무에서 요구되는 전문성을 체계적인 고품질 교육을 통해 전달함으로써 취득 후 산업현장에 즉시
+                    적용할 수 있습니다.</p>
+                  </div>
+                  <div class="qualification_item">
+                    <h5>-최신기술에 대한 능력 검정, 최고의 전기기술교육을 경험할 수 있는 자격</h5>
+                    <p>LS일렉트릭은 기술의 변화에 따른 산업현장의 요구를 상시 반영하여 문제를 출제하고 다산에듀는 전기기술교육의 전문성과 에듀테크를 바탕으로 최고품질의 기술교육 경험을 제공합니다.</p>
+                  </div>
+                  <div class="qualification_item">
+                    <h5>-개인, 기업, 교육운영기관 모두가 성장하는 자격</h5>
+                    <p>자격 취득자는 더 많은 기회를 얻고, 기업은 재교육 비용을 최소화 하고, 교육기관은 효율적이고 효과적인 교육과정 운영을 통해 PLC제어기술자 자격을 활용하는 모두가 경쟁력을 갖출 수 있습니다.</p>
+                  </div>
+                </div>
+                <div class="qualification_check">
+                  <span>CHECK POINT!</span>
+                  <ul>
+                    <li>•교육운영기관 : 효율적인 교육운영, 경제적인 교육운영, 편리한 교육운영, 교육생 취업률 제고 등</li>
+                    <li>•기업 : PLC활용능력의 객관적인 확인, 재교육 비용 감소, 전기전문기관이 만든 신뢰할 수 있는 자격</li>
+                    <li>•개인 : 편리한 교육 접근성, 신뢰도 높은 검정과정, 산업 4.0 핵심역량 개발, 취업기회 확대 등</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="sub_container">
+              <div class="sub_title">
+                <h5>명확한 학습목표, 투명한 검정과정 기반의 신뢰도 높은 자격</h5>
+              </div>
+              <div class="sub_content mt16">
+                <p class="c_info2">
+                  PLC교육에 부재했던 명확한 학습목표와 평가기준, 현장중심 과제 제공 등을 통해 고품질 교육과정의 가이드를 제공하고 수험자의 제출물을 기록하고 2차 채점을 진행하여 모두가 신뢰할 수 있는 자격을 운영합니다.
+                </p>
+                <div class="qualification_img">
+                  <img src="../_img/subpage/qualification_img.png" alt="" height="308">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner">
+        <div class="footer_top">
+          <div class="footer_logo">
+            <img src="../_img/common/logo_white.png" alt="푸터 로고" height="40">
+          </div>
+          <ul class="footer_menu">
+            <li class="footer-link"><a href="#">회사소개</a></li>
+            <li class="footer-link"><a href="#">오시는 길</a></li>
+            <li class="footer-link"><a href="#" class="fw600">개인정보처리방침</a></li>
+            <li class="footer-link"><a href="#">이용약관</a></li>
+          </ul>
+        </div>
+        <div class="footer_bottom">
+          <div class="footer_company_info">
+            <div class="company_info">
+              <ul class="company_info_ul bdr">
+                <li class="company_info_li"><span>회사명</span>00회사</li>
+                <li class="company_info_li"><span>대표명</span>김대표</li>
+                <li class="company_info_li"><span>사업자등록번호</span>000-00-00000</li>
+                <li class="company_info_li"><span>통신판매업</span>제0000-0000-0000호</li>
+              </ul>
+              <ul class="company_info_ul">
+                <li class="company_info_li"><span>주소</span>서울시 00구 00로 00층 [00000]</li>
+              </ul>
+              <ul class="company_info_ul">
+                <li class="company_info_li"><span>TEL</span>000-000-0000</li>
+                <li class="company_info_li"><span>E-mail</span>pcq@gmail.com</li>
+                <li class="company_info_li"><span>FAX</span>000-0000-0000</li>
+              </ul>
+            </div>
+            <p class="copyright">copyright &copy; pcq. ALL Rights Reserved.</p>
+          </div>
+          <div class="footer_family_site">
+            <select name="" id="" class="nice-select select--typeA sm">
+              <option value="">관련사이트</option>
+              <option value="">다산에듀</option>
+              <option value="">PCQ</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="scroll_top"></div>
+  </div>
+</body>
+
+</html>
